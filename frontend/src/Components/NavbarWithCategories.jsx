@@ -326,7 +326,7 @@ export default function NavbarWithCategories() {
 
       {/* CATEGORY NAVBAR - DESKTOP */}
       <nav className="bg-white shadow-md sticky top-0 z-50 hidden md:block">
-        <div className="max-w-[1400px] mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-4 h-12 flex items-center justify-between">
           <div className="flex space-x-12 text-gray-800 font-medium relative mx-25 ">
             {categories.map((cat, index) => (
               <div key={index} className="relative group">
@@ -341,8 +341,8 @@ export default function NavbarWithCategories() {
                 {
                   // Complex dropdown for Cats and Dogs
                   ["Cats", "Dogs"].includes(cat.name) ? (
-                    <div className="absolute left-0 top-10 w-[1150px] h-[500px] bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-y-auto rounded-lg p-6">
-                      <div className="mb-6">
+                    <div className="absolute left-0 top-10 w-[1150px] h-[500px] bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-y-auto rounded-lg p-2 scrollbar-hide">
+                      <div className="mb-3">
                         <h3 className="text-lg font-bold mb-4 text-gray-800">Shop For</h3>
                         <div className="grid grid-cols-7 gap-0 ">
                           {cat.subCategories.shopFor.map((item, subIndex) => (
@@ -359,7 +359,7 @@ export default function NavbarWithCategories() {
                       </div>
 
   <div>
-  <h3 className="text-lg font-bold mb-4 text-gray-800">Top Brands</h3>
+  <h3 className="text-md font-semibold mb-2 text-gray-800">Top Brands</h3>
 
   <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-1 pb-1 scrollbar-hide">
     <div className="flex space-x-2 md:space-x-6 mx-2">
@@ -373,6 +373,8 @@ export default function NavbarWithCategories() {
             src={brand.logo}
             alt={brand.name}
             className="w-24 h-24 mx-auto rounded-full object-cover border mb-2"
+            loading="lazy"
+
           />
           <span className="block text-sm font-medium text-gray-700">{brand.name}</span>
 
