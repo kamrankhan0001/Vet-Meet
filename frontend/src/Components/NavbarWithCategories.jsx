@@ -6,7 +6,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import LoginWithOTP from "../pages/ProfilePage"; // Assuming this is your user login modal
+import LoginWithOTP from "../pages/ProfilePage"; 
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import DeliveryModal from "./DeliveryModal";
@@ -49,6 +49,13 @@ import catBrand3 from '../assets/Categories/catBrand3.png';
 import catBrand4 from '../assets/Categories/catBrand4.png';
 import catBrand5 from '../assets/Categories/catBrand5.png';
 import catBrand6 from '../assets/Categories/catBrand6.png';
+import breed1 from '../assets/Categories/breed1.png';
+import breed2 from '../assets/Categories/breed2.png';
+import breed3 from '../assets/Categories/breed3.png'; 
+import breed4 from '../assets/Categories/breed4.png'; 
+import breed5 from '../assets/Categories/breed5.png';
+import breed6 from '../assets/Categories/breed6.png';
+import breed7 from '../assets/Categories/breed7.png';
 
 const categories = [
   {
@@ -121,7 +128,21 @@ const categories = [
     ]
   },
   { name: "Grooming", subCategories: ["Discounted Items", "Bundles"] },
-  { name: "Meet And Breed", subCategories: ["Labrador", "Persian Cat"] },
+  {
+    name: "Meet And Breed",
+    // MODIFIED: Restructured subCategories for Shop By Breed to match the image-based layout
+    subCategories: {
+      shopFor: [
+        { name: "Golden Retriever", img: breed3 },
+        { name: "German Shepherd", img: breed4 },
+        { name: "Labrador", img: breed2},
+        { name: "Rottweiler", img: breed1 },
+        { name: "Beagle", img: breed5 },
+        { name: "Shih Tzu", img: breed6 },
+        { name: "Boxer", img: breed7 },
+      ],
+    },
+  },
   {name: "Pet Essentials" , subCategories: ["", ""]},
   {
     name: "Pharmacy",
@@ -325,98 +346,107 @@ export default function NavbarWithCategories() {
       </div>
 
       {/* CATEGORY NAVBAR - DESKTOP */}
-      <nav className="bg-white shadow-md sticky top-0 z-50 hidden md:block">
-        <div className="max-w-[1400px] mx-auto px-4 h-12 flex items-center justify-between">
-          <div className="flex space-x-12 text-gray-800 font-medium relative mx-25 ">
-            {categories.map((cat, index) => (
-              <div key={index} className="relative group">
-                <button
-                  onClick={() => handleMainCategoryClick(cat.name)}
-                  className="hover:text-blue-600 text-xl font-bold cursor-pointer"
-                >
-                  {cat.name}
-                </button>
+<nav className="bg-white shadow-md sticky top-0 z-50 hidden md:block">
+  <div className="max-w-[1400px] mx-auto px-4 h-12 flex items-center justify-between">
+    <div className="flex space-x-12 text-gray-800 font-medium relative mx-25">
+      {categories.map((cat, index) => (
+        <div key={index} className="relative group">
+          <button
+            onClick={() => handleMainCategoryClick(cat.name)}
+            className="hover:text-blue-600 text-xl font-bold cursor-pointer"
+          >
+            {cat.name}
+          </button>
 
-                {/* Conditional rendering for desktop dropdown content */}
-                {
-                  // Complex dropdown for Cats and Dogs
-                  ["Cats", "Dogs"].includes(cat.name) ? (
-                    <div className="absolute left-0 top-10 w-[1150px] h-[500px] bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-y-auto rounded-lg p-2 scrollbar-hide">
-                      <div className="mb-3">
-                        <h3 className="text-lg font-bold mb-4 text-gray-800">Shop For</h3>
-                        <div className="grid grid-cols-7 gap-0 ">
-                          {cat.subCategories.shopFor.map((item, subIndex) => (
-                            <div
-                              key={subIndex}
-                              className="flex flex-col items-center text-center cursor-pointer p-2 rounded-lg"
-                              onClick={() => handleSubCategoryClick(item)}
-                            >
-                              <img src={item.img} alt={item.name} className="w-20 h-20 rounded-lg object-cover mb-2" />
-                              <span className="text-sm font-medium text-gray-700">{item.name}</span>
-                            </div>
-                          ))}
-                        </div>
+          {/* Conditional rendering for desktop dropdown content */}
+          {
+            ["Cats", "Dogs"].includes(cat.name) ? (
+              <div className="absolute left-0 top-10 w-[1150px] h-[500px] bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-y-auto rounded-lg p-2 scrollbar-hide">
+                <div className="mb-3">
+                  <h3 className="text-lg font-bold mb-4 text-gray-800">Shop For</h3>
+                  <div className="grid grid-cols-7 gap-0">
+                    {cat.subCategories.shopFor.map((item, subIndex) => (
+                      <div
+                        key={subIndex}
+                        className="flex flex-col items-center text-center cursor-pointer p-2 rounded-lg"
+                        onClick={() => handleSubCategoryClick(item)}
+                      >
+                        <img src={item.img} alt={item.name} className="w-20 h-20 rounded-lg object-cover mb-2" />
+                        <span className="text-sm font-medium text-gray-700">{item.name}</span>
                       </div>
+                    ))}
+                  </div>
+                </div>
 
-  <div>
-  <h3 className="text-md font-semibold mb-2 text-gray-800">Top Brands</h3>
-
-  <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-1 pb-1 scrollbar-hide">
-    <div className="flex space-x-2 md:space-x-6 mx-2">
-      {cat.subCategories.topBrands.map((brand, subIndex) => (
+                <div>
+                  <h3 className="text-md font-semibold mb-2 text-gray-800">Top Brands</h3>
+                  <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-1 pb-1 scrollbar-hide">
+                    <div className="flex space-x-2 md:space-x-6 mx-2">
+                      {cat.subCategories.topBrands.map((brand, subIndex) => (
+                        <div
+                          key={subIndex}
+                          className="snap-center flex-shrink-0 rounded-xl overflow-hidden p-3 text-center relative cursor-pointer transition"
+                          onClick={() => handleSubCategoryClick(brand)}
+                        >
+                          <img
+                            src={brand.logo}
+                            alt={brand.name}
+                            className="w-24 h-24 mx-auto rounded-full object-cover border mb-2"
+                            loading="lazy"
+                          />
+                          <span className="block text-sm font-medium text-gray-700">{brand.name}</span>
+                          {brand.discount && (
+                            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs px-2 py-0 rounded-full whitespace-nowrap">
+                              {brand.discount}
+                            </span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : cat.name === "Meet And Breed" ? (
+  <div className="fixed top-[130px] left-0 w-full bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-hidden rounded-none px-8 py-6">
+   
+    <div className="max-w-[1400px] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6">
+      {cat.subCategories.shopFor.map((item, subIndex) => (
         <div
           key={subIndex}
-          className="snap-center flex-shrink-0 rounded-xl overflow-hidden p-3 text-center relative cursor-pointer transition"
-          onClick={() => handleSubCategoryClick(brand)}
+          className="flex flex-col items-center text-center cursor-pointer hover:scale-105 transition"
+          onClick={() => handleSubCategoryClick(item)}
         >
           <img
-            src={brand.logo}
-            alt={brand.name}
-            className="w-24 h-24 mx-auto rounded-full object-cover border mb-2"
-            loading="lazy"
-
+            src={item.img}
+            alt={item.name}
+            className="w-24 h-24 object-cover rounded-full border-3 border-lime-400 shadow-sm mb-2"
           />
-          <span className="block text-sm font-medium text-gray-700">{brand.name}</span>
-
-          {brand.discount && (
-            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs px-2 py-0 rounded-full whitespace-nowrap ">
-              {brand.discount}
-            </span>
-          )}
+          <span className="text-sm font-semibold text-gray-800">{item.name}</span>
         </div>
       ))}
     </div>
   </div>
-</div>
-            </div>
-
-                  ) :
-                  // Simple dropdown for Pharmacy
-                  cat.name === "Pharmacy" && cat.subCategories?.length > 0 ? (
-                    <div className="absolute left-0 top-full w-[1150px] h-[500px] bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-y-auto rounded-lg">
-                      <div className="grid grid-cols-5 gap-2 px-8 py-6">
-                        {cat.subCategories.map((item, subIndex) => (
-                          <div
-                            key={subIndex}
-                            className="text-sm text-gray-700 hover:text-blue-600 cursor-pointer"
-                            onClick={() => handleSubCategoryClick(item)}
-                          >
-                            {typeof item === "object" ? item.name : item}
-                          </div>
-                        ))}
-                      </div>
+): cat.name === "Pharmacy" && cat.subCategories?.length > 0 ? (
+              <div className="absolute left-0 top-full w-[1150px] h-[500px] bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-y-auto rounded-lg">
+                <div className="grid grid-cols-5 gap-2 px-8 py-6">
+                  {cat.subCategories.map((item, subIndex) => (
+                    <div
+                      key={subIndex}
+                      className="text-sm text-gray-700 hover:text-blue-600 cursor-pointer"
+                      onClick={() => handleSubCategoryClick(item)}
+                    >
+                      {typeof item === "object" ? item.name : item}
                     </div>
-                  ) : (
-                    // No dropdown for any other categories on desktop hover
-                    null
-                  )
-                }
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
+            ) : null
+          }
         </div>
-      </nav>
-
+      ))}
+    </div>
+  </div>
+</nav>
 
       {/* CATEGORY DRAWER - MOBILE */}
       <div
