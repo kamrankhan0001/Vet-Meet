@@ -420,6 +420,7 @@ export default function NavbarWithCategories() {
             src={item.img}
             alt={item.name}
             className="w-24 h-24 object-cover rounded-full border-3 border-lime-400 shadow-sm mb-2"
+            loading="lazy"
           />
           <span className="text-sm font-semibold text-gray-800">{item.name}</span>
         </div>
