@@ -41,6 +41,8 @@ import CouponsAndOffersPage from "./pages/CouponsPage";
 import PaymentsAndRefundsPage from "./pages/PaymentAndRefund";
 import ReturnsAndCancellationsPage from "./pages/ReturnAndCancel";
 import DashboardPage from "./pages/DashboardPage";
+import GoldenRetriever from "./pages/meetByBreed/GoldenRetriever";
+import GermanShepherd from "./pages/meetByBreed/GermanShepherd";
 import './firebase';
 
 const allArticles = [
@@ -117,6 +119,9 @@ const App = () => {
         <Route path="/help/payments" element={<PaymentsAndRefundsPage />} />
         <Route path="/help/returns" element={<ReturnsAndCancellationsPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/breed/golden-retriever" element={<GoldenRetriever />} />
+        <Route path="/breed/german-shepherd" element={<GermanShepherd />} />
+
 
        
         {/* <Route

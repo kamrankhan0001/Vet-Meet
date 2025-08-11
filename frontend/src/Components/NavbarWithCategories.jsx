@@ -133,8 +133,8 @@ const categories = [
     // MODIFIED: Restructured subCategories for Shop By Breed to match the image-based layout
     subCategories: {
       shopFor: [
-        { name: "Golden Retriever", img: breed3 },
-        { name: "German Shepherd", img: breed4 },
+        { name: "Golden Retriever", img: breed3, path: "/breed/golden-retriever" },
+        { name: "German Shepherd", img: breed4, path: "/breed/german-shepherd" },
         { name: "Labrador", img: breed2},
         { name: "Rottweiler", img: breed1 },
         { name: "Beagle", img: breed5 },
@@ -160,17 +160,17 @@ const categories = [
       ]
     }
   },
-  { name: "Day Care", subCategories: ["Bird Feed", "Accessories"] },
+  // { name: "Day Care", subCategories: ["Bird Feed", "Accessories"] },
   
   
-  // {
-  //   name: "Vet&Meet Clinic",
-  //   path: "/clinic",
-  //   subCategories: [
-  //     {name: "Vet&Meet Clinic", path: "/clinic"},
-  //     {name: "Checkup", path: "/clinic/checkup"},
-  //   ]
-  // },
+  {
+    name: "Day Care",
+    path: "/clinic",
+    subCategories: [
+      {name: "Vet&Meet Clinic", path: "/clinic"},
+      {name: "Checkup", path: "/clinic/checkup"},
+    ]
+  },
   
 ];
 
@@ -235,7 +235,7 @@ export default function NavbarWithCategories() {
       navigate("/henlo-products");
     } else if (categoryName === "Pharmacy") {
       navigate("/pharmacy");
-    } else if (categoryName === "Vet&Meet Clinic") {
+    } else if (categoryName === "Day Care") {
       navigate("/clinic");
     }
     if (drawerOpen) {
@@ -359,8 +359,8 @@ export default function NavbarWithCategories() {
           </button>
 
           {/* Conditional rendering for desktop dropdown content */}
-          {
-            ["Cats", "Dogs"].includes(cat.name) ? (
+          
+            {["Cats", "Dogs"].includes(cat.name) ? (
               <div className="absolute left-0 top-10 w-[1150px] h-[500px] bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-y-auto rounded-lg p-2 scrollbar-hide">
                 <div className="mb-3">
                   <h3 className="text-lg font-bold mb-4 text-gray-800">Shop For</h3>
