@@ -43,6 +43,7 @@ import ReturnsAndCancellationsPage from "./pages/ReturnAndCancel";
 import DashboardPage from "./pages/DashboardPage";
 import GoldenRetriever from "./pages/meetByBreed/GoldenRetriever";
 import GermanShepherd from "./pages/meetByBreed/GermanShepherd";
+import Labrador from "./pages/meetByBreed/Labrador";
 import './firebase';
 
 const allArticles = [
@@ -121,6 +122,7 @@ const App = () => {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/breed/golden-retriever" element={<GoldenRetriever />} />
         <Route path="/breed/german-shepherd" element={<GermanShepherd />} />
+        <Route path="/breed/labrador" element={<Labrador />} />
 
 
        

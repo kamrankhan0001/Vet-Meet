@@ -1,37 +1,37 @@
 import React, { useState, useRef } from 'react';
 
-import img1 from '../../assets/Breed/img1.png';
-import img2 from '../../assets/Breed/img2.png';
-import img3 from '../../assets/Breed/img3.png';
-import img4 from '../../assets/Breed/img4.png';
-import img5 from '../../assets/Breed/img5.png';
-import img6 from '../../assets/Breed/img6.png';
-import grooming1 from '../../assets/Breed/grooming1.png';
-import paw from '../../assets/Breed/paw.png';
+import img1 from '../../assets/Labrador/img1.png';
+import img2 from '../../assets/Labrador/img2.png';
+import img3 from '../../assets/Labrador/img3.png';
+import img4 from '../../assets/Labrador/img4.png';
+import img5 from '../../assets/Labrador/img5.png';
+import img6 from '../../assets/Labrador/img6.png';
+import grooming1 from '../../assets/Labrador/grooming1.png';
+import paw from '../../assets/Labrador/paw.png';
 import brush from '../../assets/Categories/brush.png';
 import shampoo from '../../assets/Categories/shampoo.png';
-import training1 from '../../assets/Breed/training1.png';
-import training2 from '../../assets/Breed/training2.png';
-import training3 from '../../assets/Breed/training3.png';
-import health from '../../assets/Breed/health.png';
-import chickenfood from '../../assets/Breed/chickenfood.png';
-import fishfood from '../../assets/Breed/fishfood.png';
+import training1 from '../../assets/Labrador/training1.png';
+import training2 from '../../assets/Labrador/training2.png';
+import training3 from '../../assets/Labrador/training3.png';
+import health from '../../assets/Labrador/health.png';
+import chickenfood from '../../assets/Labrador/chickenfood.png';
+import fishfood from '../../assets/Labrador/fishfood.png';
 import baked from '../../assets/Categories/bakedfood.png';
-import soy from '../../assets/Breed/soyfood.png';
-import puppy from '../../assets/Breed/puppyfood.png';
-import adult from '../../assets/Breed/adultfood.png';
-import senior from '../../assets/Breed/seniorfood.png';
+import soy from '../../assets/Labrador/soyfood.png';
+import puppy from '../../assets/Labrador/puppyfood.png';
+import adult from '../../assets/Labrador/adultfood.png';
+import senior from '../../assets/Labrador/seniorfood.png';
 import diet2 from '../../assets/Categories/diet2.png';
-import rope from '../../assets/Categories/rope.png';
+import rope from '../../assets/Labrador/rope.png';
 import leashes from '../../assets/Categories/leashes.png';
-import toy from '../../assets/Categories/toy.png';
-import interactive from '../../assets/Categories/interactive.png';
-import puzzle from '../../assets/Categories/puzzle.png';
-import chew from '../../assets/Categories/chew.png';
-import ear from '../../assets/Breed/ear.png';
+import toy from '../../assets/Labrador/toy.png';
+import interactive from '../../assets/Labrador/interactive.png';
+import puzzle from '../../assets/Labrador/puzzle.png';
+import chew from '../../assets/Labrador/chew.png';
+import ear from '../../assets/Labrador/ear.png';
 
 
-const GermanShepherdPage = ({ onBackClick }) => {
+const LabradorPage = ({ onBackClick }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   // Refs for each section to enable scrolling
@@ -46,18 +46,19 @@ const GermanShepherdPage = ({ onBackClick }) => {
 
   const faqData = [
   {
-    question: 'Are German Shepherds aggressive?',
-    answer: 'German Shepherds are not inherently aggressive, but they are protective and highly alert. With proper training, socialization, and a confident handler, they can be loyal, calm, and well-behaved companions. Aggression usually results from poor training, lack of socialization, or mistreatment.'
+    question: 'Are Labradors aggressive?',
+    answer: 'Labradors are generally not aggressive and are known for their friendly, gentle, and affectionate temperament. They are highly sociable and make excellent family pets. Any signs of aggression are often due to poor training, lack of socialization, or underlying health issues.'
   },
   {
-    question: 'What kind of weather is ideal for German Shepherds?',
-    answer: 'German Shepherds adapt well to various climates. Their double coat provides insulation in cold weather, but they can overheat in extreme heat. During hot weather, ensure they have shade, plenty of water, and avoid intense exercise during peak heat hours.'
+    question: 'What kind of weather is ideal for Labradors?',
+    answer: 'Labradors adapt well to a range of climates. Their dense double coat protects them in colder weather, but they may struggle in extreme heat. During hot conditions, ensure they have shade, fresh water, and avoid heavy exercise during the hottest parts of the day.'
   },
   {
-    question: 'Do German Shepherds get along with other pets?',
-    answer: 'German Shepherds can get along well with other pets if they are socialized from a young age. Their herding and protective instincts mean they may try to “guard” or “herd” other animals, so early training and proper introductions are key.'
+    question: 'Do Labradors get along with other pets?',
+    answer: 'Yes, Labradors are typically very friendly and get along well with other dogs and pets, especially when socialized from a young age. Their easy-going nature and playfulness make them a great fit for multi-pet households.'
   }
 ];
+
 
 
   // Function to handle smooth scrolling to a section
@@ -103,14 +104,14 @@ const GermanShepherdPage = ({ onBackClick }) => {
         {/* About Section - Combined from initial overview and traits */}
         <div ref={aboutRef}>
           {/* Breed Overview Section */}
-          <section className="mb-12 bg-gradient-to-r from-blue-300 to-blue-400 p-8 rounded-xl shadow-lg flex flex-col lg:flex-row items-center gap-8">
+          <section className="mb-12 bg-gradient-to-r from-cyan-200 to-cyan-300 p-8 rounded-xl shadow-lg flex flex-col lg:flex-row items-center gap-8">
   {/* Text Section */}
   <div className="lg:w-1/2 flex-shrink-0 text-center lg:text-left">
     <h2 className="text-4xl font-extrabold mb-4 text-gray-900 leading-snug">
-      German Shepherd: The Canine All-Stars - Protecting, Serving, and Winning Hearts
+      Labrador Retrievers: The Aquatic Adventurers of the Dog World!
     </h2>
     <p className="text-lg text-gray-800 max-w-lg mx-auto lg:mx-0">
-      Germany's Livestock Custodians, Sentinel Soldiers, and Guardian Angels.
+      From Newfoundland's shores to family homes: Fishermen's trusted allies to cherished companions
     </p>
   </div>
 
@@ -128,30 +129,30 @@ const GermanShepherdPage = ({ onBackClick }) => {
 
 
           {/* Detailed Characteristics Section */}
-          <section className="mb-12 bg-green-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row gap-8 text-gray-800">
+          <section className="mb-12 bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row gap-8 text-gray-800">
             <div className="md:w-1/2">
-              <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat: Curly & wavy</h3>
-              <p className="text-lg mb-2"><span className="font-semibold">Shedding:</span> High</p>
-              <p className="text-lg mb-2"><span className="font-semibold">Size:</span> Large</p>
+              <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat: Thick and Soft</h3>
+              <p className="text-lg mb-2"><span className="font-semibold">Shedding:</span> Medium</p>
+              <p className="text-lg mb-2"><span className="font-semibold">Size:</span>Medium</p>
               <p className="text-lg mb-2"><span className="font-semibold">Life Expectancy:</span> 10-12 years</p>
             </div>
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat Colours</h3>
               <div className="flex space-x-4 mb-4">
-                <span className="bg-[#C68642] text-black font-semibold px-4 py-1 rounded-full">Black & Tan</span>
+                <span className="bg-[#FDDC5C] text-black font-semibold px-4 py-1 rounded-full">Light Golden</span>
                 <span className="bg-gray-700 text-white font-semibold px-4 py-1 rounded-full">Black</span>
-                <span className="bg-white text-black font-semibold px-4 py-1 rounded-full">Solid White</span>
+                <span className="bg-[#7B3F00] text-white font-semibold px-4 py-1 rounded-full">Chocklate</span>
               </div>
               <div className="mb-4">
   <div className="grid grid-cols-3 gap-4 text-lg mb-2">
     <span className="font-semibold">Weight:</span>
-    <span>30-40 kgs (male)</span>
-    <span>25-35 kgs (female)</span>
+    <span>24-36 kgs (male)</span>
+    <span>20-30 kgs (female)</span>
   </div>
   <div className="grid grid-cols-3 gap-4 text-lg">
     <span className="font-semibold">Height:</span>
-    <span>61-66 cm (male)</span>
-    <span>56-61 cm (female)</span>
+    <span>55-62 cm (male)</span>
+    <span>49-55 cm (female)</span>
   </div>
 </div>
 
@@ -166,7 +167,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
       Adaptability
     </h2>
     <p className="text-lg text-gray-700">
-      Temperatures should be moderate for German Shepherds
+      Temperatures should be moderate for Labrador.
     </p>
   </div>
 
@@ -183,11 +184,11 @@ const GermanShepherdPage = ({ onBackClick }) => {
   <div className="lg:w-1/3 flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-6">
     <div className="text-center">
       <p className="text-2xl font-semibold text-gray-800">Hot Weather Tolerance:</p>
-      <p className="text-lg text-black font-bold">up to 28°C</p>
+      <p className="text-lg text-black font-bold">up to 35°C</p>
     </div>
     <div className="text-center">
       <p className="text-2xl font-semibold text-gray-800">Cold Weather Tolerance:</p>
-      <p className="text-lg text-black font-bold">up to 8°C</p>
+      <p className="text-lg text-black font-bold">up to 10°C</p>
     </div>
   </div>
 </section>
@@ -207,11 +208,11 @@ const GermanShepherdPage = ({ onBackClick }) => {
   {/* Traits Grid */}
   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center">
     {[
-      { score: "4", label: "Friendliness" },
-      { score: "4", label: "Good With Other Dogs" },
-      { score: "4", label: "Good With Kids" },
-      { score: "4", label: "Barking Tendencies" },
-      { score: "5", label: "Energy Level" },
+      { score: "5", label: "Friendliness" },
+      { score: "5", label: "Good With Other Dogs" },
+      { score: "5", label: "Good With Kids" },
+      { score: "3", label: "Barking Tendencies" },
+      { score: "4", label: "Energy Level" },
       { score: "4", label: "Playfulness" }
     ].map((trait, i) => (
       <div
@@ -237,7 +238,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
     <p className="text-xl font-semibold text-center sm:text-left">
       Good For First-Time Pet Parents
     </p>
-    <div className="text-4xl font-extrabold">8/10</div>
+    <div className="text-4xl font-extrabold">9/10</div>
   </div>
   
 
@@ -248,10 +249,10 @@ const GermanShepherdPage = ({ onBackClick }) => {
   {/* Text Section */}
   <div className="flex-1 text-left">
     <h2 className="text-xl font-bold text-gray-900 mb-1 underline decoration-red-500 decoration-2">
-      German Shepherd Diet
+      Labrador Diet
     </h2>
     <p className="text-gray-700">
-      Consider following tips when choosing food for your German Shepherds.
+      Consider following tips when choosing food for your Labrador.
     </p>
   </div>
 
@@ -277,11 +278,11 @@ const GermanShepherdPage = ({ onBackClick }) => {
       1. Choose a protein-rich diet
     </h3>
     <p className="text-gray-700 mb-4">
-      German Shepherds have a high energy level and require 
-      <span className="italic"> a high protein diet</span>
-      to support their active lifestyle. Look for a diet with at least 18-25% protein for 
-      <span className="italic"> dry food </span>
-      adult German Shepherds and even more for growing puppies
+      Labradors require plenty of protein to 
+      <span className="italic"> fuel their muscles</span>
+      Look for dog food that contains a high percentage of protein, 
+      
+      such as chicken, fish, or lamb.
     </p>
   </div>
 
@@ -320,8 +321,8 @@ const GermanShepherdPage = ({ onBackClick }) => {
     <div className="mb-8">
       <h3 className="font-bold text-gray-900 mb-2">2. Avoid fillers & additives</h3>
       <p className="text-gray-700 mb-4">
-        German Shepherds have a sensitive stomach and should avoid food that includes fillers such as
-        wheat and soy that are difficult to digest and may cause allergies.
+        Feed your Labrador, food with high-quality ingredients, such as real meat and vegetables. 
+        Avoid dog food containing fillers, like corn, wheat, and by-products.
       </p>
       <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -358,9 +359,9 @@ const GermanShepherdPage = ({ onBackClick }) => {
   <div className="flex-1 text-left">
     <h3 className="font-bold text-gray-900 mb-2">3. Consider their age</h3>
     <p className="text-gray-700 mb-4">
-      Choose an appropriate diet according to your German Shepherd's age, as puppies need more 
-      protein and fat for growth, while adult and senior dogs may require lower levels for weight 
-      maintenance.
+      The nutritional needs of puppies are different from those of adult dogs. 
+      A puppy's diet should be higher in protein and calories to support its rapid growth and development. 
+      Diet for an adult dog should be formulated to meet its maintenance needs.
     </p>
   </div>
 
@@ -405,38 +406,39 @@ const GermanShepherdPage = ({ onBackClick }) => {
         {/* Diet/Health Section */}
         
           <section className="mb-12 bg-orange-50 p-8 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">German Shepherd Common health concerns</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Labrador Common health concerns</h2>
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="lg:w-1/2 flex flex-col justify-between">
-                <p className="text-lg text-gray-700 mb-6">
-                  German Shepherds are intelligent and athletic, but they can be susceptible 
-                  to breed-specific health conditions. Let's explore some common issues.
-                </p>
+                <h3 className="text-lg text-gray-700 mb-6 font-semibold">
+                  Generally, Labrador Retrievers are healthy dogs, but like all breeds, 
+                  they are also prone to certain health issues. Scroll to know what they are.
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-2">Bloating/GDV</h3>
+                    <h3 className="text-xl font-semibold mb-2">Obesity</h3>
                     <p className="text-sm text-gray-600">
-                      German Shepherds are also prone to bloating, which occurs when the 
-                      stomach becomes filled with gas and twists on itself.
+                      Labradors are prone to obesity, which can lead to a list of health problems
                     </p>
                   </div>
                   <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold mb-2">Ear Infections</h3>
                     <p className="text-sm text-gray-600">
-                      is can result in symptoms like coughing and breathing difficulties.Ear infections 
-                      may occur due to their floppy ears that trap moisture and bacteria.
+                      Labradors are prone to ear infections due to 
+                      their floppy ears, which can trap moisture and debris.
                     </p>
                   </div>
                   <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-2">Osteoarthritis</h3>
+                    <h3 className="text-xl font-semibold mb-2">Hip Dysplasia</h3>
                     <p className="text-sm text-gray-600">
-                      A condition that affects the joints, causing pain and stiffness, may occur in this breed
+                      Labradors are particularly susceptible to hip dysplasia 
+                      due to their large size and inactive lifestyle
                     </p>
                   </div>
                   <div className="p-4 bg-orange-100 rounded-lg shadow-sm col-span-1 md:col-span-2">
                     <h3 className="text-xl font-semibold mb-2">Allergies</h3>
                     <p className="text-sm text-gray-600">
-                      German Shepherds can suffer from skin and food allergies that cause itching, redness, and hair loss.
+                      Labradors can develop skin or food allergies, 
+                      which can cause itching, scratching, and skin irritation
                     </p>
                   </div>
                 </div>
@@ -468,7 +470,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
         {/* Training Section */}
         <div ref={trainingRef}>
           <section className="mb-12 bg-gray-100 p-8 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">German Shepherd Training</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Labrador Training</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="md:order-last">
                 <img src={training1} 
@@ -480,12 +482,15 @@ const GermanShepherdPage = ({ onBackClick }) => {
               </div>
               <div>
                 <p className="text-lg text-gray-700 mb-6">
-                  German Shepherds thrive on regular exercise and mental stimulation. Here are some activities to keep them happy and healthy.
+                  Trainable, intelligent, and eager to please, Labradors excel in learning various 
+                  commands and tasks, making them a joy to train. Let's uncover some of the activities 
+                  to unlock their full potential.
                 </p>
                 <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Lots of physical exercise</h3>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Physical training and exercises</h3>
                   <p className="text-gray-600">
-                    German Shepherds require regular physical exercise. Include activities such as running, playing fetch, swimming, agility training, or hiking in their training regime.
+                    Good exercises for Labradors include walks, runs, hikes, and play sessions. 
+                    They also enjoy playing fetch and participating in agility activities.
                   </p>
      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -512,10 +517,11 @@ const GermanShepherdPage = ({ onBackClick }) => {
                   
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">2. Engage in interactive play</h3>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">2. Interactive Play</h3>
                   <p className="text-gray-600">
-                    German Shepherds require mental stimulation to keep their minds active. Activities
-                    such as scent-retention games and puzzle toys are great options to keep them stimulated.
+                    Mental stimulation is essential for Labradors to prevent boredom. 
+                    Activities like obedience and agility training, puzzle toys, 
+                    scent games, and interactive toys can help keep their minds active and engaged.
                   </p>
     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -566,12 +572,13 @@ const GermanShepherdPage = ({ onBackClick }) => {
 <div ref={groomingRef}>
   <section className="mb-12 bg-pink-100 p-8 rounded-lg shadow-md">
     <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">
-      German Shepherd Grooming
+      Labrador Grooming
     </h2>
     <div className="flex flex-col lg:flex-row items-center gap-8">
       <div className="lg:w-1/2 flex-shrink-0">
         <p className="text-lg text-gray-700 mb-6">
-          German Shepherds have relatively low grooming needs despite having dense and medium-length coats. Here are some essential tips to ensure they shine.
+          Labradors have short, dense coats that require 
+          minimal grooming. Here are some tips for grooming your labrador.
         </p>
       </div>
       <div className="lg:w-1/2">
@@ -595,7 +602,9 @@ const GermanShepherdPage = ({ onBackClick }) => {
     <div className="lg:w-1/2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">1. Brush and bath</h3>
       <p className="text-gray-600 leading-relaxed">
-        German Shepherds should be regularly brushed to remove loose hair and distribute natural oils. Occasional bathing is sufficient to keep them clean and fresh. Brushes-Combs Brushes & Combs Shampoos-conditioners Shampoos & conditioners
+        Labradors have a thick, dense coat that sheds heavily, so it is important 
+        to brush them regularly to remove 
+        loose fur and prevent matting and bathe them occasionally with a mild shampoo.
 
       </p>
     </div>
@@ -655,7 +664,9 @@ const GermanShepherdPage = ({ onBackClick }) => {
     <div className="lg:w-1/2 order-2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">2. Keep their ear clean</h3>
       <p className="text-gray-600 leading-relaxed">
-        German Shepherds have ears prone to infections, so it's important to check their ears regularly and to clean them when required with a cotton ball and a mild ear-cleaning solution.
+        Labradors have floppy ears that can be prone to infections. 
+        Use a veterinarian-approved ear cleaning solution to gently 
+        clean the inside of their ears and avoid inserting anything into the ear canal.
       </p>
     </div>
   </div>
@@ -666,7 +677,8 @@ const GermanShepherdPage = ({ onBackClick }) => {
     <div className="lg:w-1/2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">3. Keep their paws and nails clean</h3>
       <p className="text-gray-600 leading-relaxed">
-        To avoid discomfort and injury it's important to trim their nails regularly to keep them at a healthy length.
+        Regular nail trims are essential for Labradors to prevent painful splitting or cracking. 
+        Trim them when you hear clicking on the floor, using a sharp, dog-specific nail trimmer.
       </p>
     </div>
     {/* Images */}
@@ -712,7 +724,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
           </div>
         </section>
 
-        <section className="relative bg-orange-200 rounded-lg">
+        <section className="relative bg-blue-200 rounded-lg">
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
     {/* Image Section */}
     <div className="md:w-1/2 w-full">
@@ -727,9 +739,9 @@ const GermanShepherdPage = ({ onBackClick }) => {
     {/* Text Section */}
     <div className="md:w-1/2 w-full p-8 flex items-center justify-center">
       <p className="text-black text-xl md:text-2xl font-semibold leading-relaxed text-center md:text-left">
-        German Shepherds are deeply loyal to their families and develop strong bonds with their
-        owners. Engage in activities they love: play, walks, training, and relaxation to strengthen
-        loyalty and affection.
+        With webbed toes and a water-repellent coat, labradors are natural-born swimmers. 
+        Their otter-like tail motion propels them with speed and agility, making them ideal 
+        for water activities and rescues.
       </p>
     </div>
   </div>
@@ -783,4 +795,4 @@ const GermanShepherdPage = ({ onBackClick }) => {
   );
 };
 
-export default GermanShepherdPage;
+export default LabradorPage;
