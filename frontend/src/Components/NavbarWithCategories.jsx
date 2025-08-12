@@ -136,7 +136,7 @@ const categories = [
         { name: "Golden Retriever", img: breed3, path: "/breed/golden-retriever" },
         { name: "German Shepherd", img: breed4, path: "/breed/german-shepherd" },
         { name: "Labrador", img: breed2, path: "/breed/labrador" },
-        { name: "Rottweiler", img: breed1 },
+        { name: "Rottweiler", img: breed1, path: "/breed/rottweiler" },
         { name: "Beagle", img: breed5 },
         { name: "Shih Tzu", img: breed6 },
         { name: "Boxer", img: breed7 },

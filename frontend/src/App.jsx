@@ -45,6 +45,7 @@ import GoldenRetriever from "./pages/meetByBreed/GoldenRetriever";
 import GermanShepherd from "./pages/meetByBreed/GermanShepherd";
 import Labrador from "./pages/meetByBreed/Labrador";
 import './firebase';
+import Rottweiler from "./pages/meetByBreed/Rottweiler";
 
 const allArticles = [
   {
@@ -123,6 +124,9 @@ const App = () => {
         <Route path="/breed/golden-retriever" element={<GoldenRetriever />} />
         <Route path="/breed/german-shepherd" element={<GermanShepherd />} />
         <Route path="/breed/labrador" element={<Labrador />} />
+        <Route path="/breed/rottweiler" element={<Rottweiler />} />
+        
+        
 
 
        

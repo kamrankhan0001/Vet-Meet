@@ -1,37 +1,37 @@
 import React, { useState, useRef } from 'react';
 
-import img1 from '../../assets/Breed/img1.png';
-import img2 from '../../assets/Breed/img2.png';
-import img3 from '../../assets/Breed/img3.png';
-import img4 from '../../assets/Breed/img4.png';
-import img5 from '../../assets/Breed/img5.png';
-import img6 from '../../assets/Breed/img6.png';
-import grooming1 from '../../assets/Breed/grooming1.png';
-import paw from '../../assets/Breed/paw.png';
+import img1 from '../../assets/Rottweiler/img1.png';
+import img2 from '../../assets/Rottweiler/img2.png';
+import img3 from '../../assets/Rottweiler/img3.png';
+import img4 from '../../assets/Rottweiler/img4.png';
+import img5 from '../../assets/Rottweiler/img5.png';
+import img6 from '../../assets/Rottweiler/img6.png';
+import grooming1 from '../../assets/Rottweiler/grooming1.png';
+import paw from '../../assets/Rottweiler/paw.png';
 import brush from '../../assets/Categories/brush.png';
 import shampoo from '../../assets/Categories/shampoo.png';
-import training1 from '../../assets/Breed/training1.png';
-import training2 from '../../assets/Breed/training2.png';
-import training3 from '../../assets/Breed/training3.png';
-import health from '../../assets/Breed/health.png';
-import chickenfood from '../../assets/Breed/chickenfood.png';
-import fishfood from '../../assets/Breed/fishfood.png';
+import training1 from '../../assets/Rottweiler/training1.png';
+import training2 from '../../assets/Rottweiler/training2.png';
+import training3 from '../../assets/Rottweiler/training3.png';
+import health from '../../assets/Rottweiler/health.png';
+import chickenfood from '../../assets/Rottweiler/chickenfood.png';
+import fishfood from '../../assets/Rottweiler/fishfood.png';
 import baked from '../../assets/Categories/bakedfood.png';
-import soy from '../../assets/Breed/soyfood.png';
-import puppy from '../../assets/Breed/puppyfood.png';
-import adult from '../../assets/Breed/adultfood.png';
-import senior from '../../assets/Breed/seniorfood.png';
+import soy from '../../assets/Rottweiler/soyfood.png';
+import puppy from '../../assets/Rottweiler/puppyfood.png';
+import adult from '../../assets/Rottweiler/adultfood.png';
+import senior from '../../assets/Rottweiler/seniorfood.png';
 import diet2 from '../../assets/Categories/diet2.png';
-import rope from '../../assets/Categories/rope.png';
+import rope from '../../assets/Labrador/rope.png';
 import leashes from '../../assets/Categories/leashes.png';
-import toy from '../../assets/Categories/toy.png';
-import interactive from '../../assets/Categories/interactive.png';
-import puzzle from '../../assets/Categories/puzzle.png';
-import chew from '../../assets/Categories/chew.png';
-import ear from '../../assets/Breed/ear.png';
+import toy from '../../assets/Rottweiler/toy.png';
+import interactive from '../../assets/Rottweiler/interactive.png';
+import puzzle from '../../assets/Labrador/puzzle.png';
+import chew from '../../assets/Labrador/chew.png';
+import ear from '../../assets/Rottweiler/ear.png';
 
 
-const GermanShepherdPage = ({ onBackClick }) => {
+const LabradorPage = ({ onBackClick }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   // Refs for each section to enable scrolling
@@ -46,16 +46,16 @@ const GermanShepherdPage = ({ onBackClick }) => {
 
   const faqData = [
   {
-    question: 'Are German Shepherds aggressive?',
-    answer: 'German Shepherds are not inherently aggressive, but they are protective and highly alert. With proper training, socialization, and a confident handler, they can be loyal, calm, and well-behaved companions. Aggression usually results from poor training, lack of socialization, or mistreatment.'
+    question: 'Are Rottweilers aggressive?',
+    answer: 'Rottweilers are not inherently aggressive but are naturally protective and confident. With proper training, socialization, and a responsible owner, they can be loyal, calm, and affectionate companions. Aggression usually occurs due to poor handling, lack of training, or negative experiences.'
   },
   {
-    question: 'What kind of weather is ideal for German Shepherds?',
-    answer: 'German Shepherds adapt well to various climates. Their double coat provides insulation in cold weather, but they can overheat in extreme heat. During hot weather, ensure they have shade, plenty of water, and avoid intense exercise during peak heat hours.'
+    question: 'What kind of weather is ideal for Rottweilers?',
+    answer: 'Rottweilers adapt well to moderate climates. Their short double coat provides some insulation, but they may be sensitive to extreme cold or heat. In hot weather, provide plenty of shade and water, and avoid strenuous activity during peak heat hours.'
   },
   {
-    question: 'Do German Shepherds get along with other pets?',
-    answer: 'German Shepherds can get along well with other pets if they are socialized from a young age. Their herding and protective instincts mean they may try to “guard” or “herd” other animals, so early training and proper introductions are key.'
+    question: 'Do Rottweilers get along with other pets?',
+    answer: 'Rottweilers can get along well with other pets if they are socialized early. They have strong guarding instincts, so introductions should be gradual and supervised. With proper guidance, they can coexist peacefully with other dogs and animals.'
   }
 ];
 
@@ -103,14 +103,14 @@ const GermanShepherdPage = ({ onBackClick }) => {
         {/* About Section - Combined from initial overview and traits */}
         <div ref={aboutRef}>
           {/* Breed Overview Section */}
-          <section className="mb-12 bg-gradient-to-r from-blue-300 to-blue-400 p-8 rounded-xl shadow-lg flex flex-col lg:flex-row items-center gap-8">
+          <section className="mb-12 bg-gradient-to-r from-orange-200 to-orange-300 p-8 rounded-xl shadow-lg flex flex-col lg:flex-row items-center gap-8">
   {/* Text Section */}
   <div className="lg:w-1/2 flex-shrink-0 text-center lg:text-left">
     <h2 className="text-4xl font-extrabold mb-4 text-gray-900 leading-snug">
-      German Shepherd: The Canine All-Stars - Protecting, Serving, and Winning Hearts
+     Rottweilers: Meet the OG gangsters of the dog world
     </h2>
     <p className="text-lg text-gray-800 max-w-lg mx-auto lg:mx-0">
-      Germany's Livestock Custodians, Sentinel Soldiers, and Guardian Angels.
+      Germany's bovine guardians, soldier protectors, and fortune defenders.
     </p>
   </div>
 
@@ -128,30 +128,29 @@ const GermanShepherdPage = ({ onBackClick }) => {
 
 
           {/* Detailed Characteristics Section */}
-          <section className="mb-12 bg-green-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row gap-8 text-gray-800">
+          <section className="mb-12 bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row gap-8 text-gray-800">
             <div className="md:w-1/2">
-              <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat: Curly & wavy</h3>
-              <p className="text-lg mb-2"><span className="font-semibold">Shedding:</span> High</p>
-              <p className="text-lg mb-2"><span className="font-semibold">Size:</span> Large</p>
-              <p className="text-lg mb-2"><span className="font-semibold">Life Expectancy:</span> 10-12 years</p>
+              <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat: Short & thick</h3>
+              <p className="text-lg mb-2"><span className="font-semibold">Shedding:</span> Medium</p>
+              <p className="text-lg mb-2"><span className="font-semibold">Size:</span>Large</p>
+              <p className="text-lg mb-2"><span className="font-semibold">Life Expectancy:</span> 8-10 years</p>
             </div>
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat Colours</h3>
               <div className="flex space-x-4 mb-4">
-                <span className="bg-[#C68642] text-black font-semibold px-4 py-1 rounded-full">Black & Tan</span>
-                <span className="bg-gray-700 text-white font-semibold px-4 py-1 rounded-full">Black</span>
-                <span className="bg-white text-black font-semibold px-4 py-1 rounded-full">Solid White</span>
+                <span className="bg-[#D2B48C] text-black font-semibold px-4 py-1 rounded-full">Black With Tan Markings</span>
+                
               </div>
               <div className="mb-4">
   <div className="grid grid-cols-3 gap-4 text-lg mb-2">
     <span className="font-semibold">Weight:</span>
-    <span>30-40 kgs (male)</span>
-    <span>25-35 kgs (female)</span>
+    <span>40-60 kgs (male)</span>
+    <span>30-50 kgs (female)</span>
   </div>
   <div className="grid grid-cols-3 gap-4 text-lg">
     <span className="font-semibold">Height:</span>
-    <span>61-66 cm (male)</span>
-    <span>56-61 cm (female)</span>
+    <span>61-68 cm (male)</span>
+    <span>56-63 cm (female)</span>
   </div>
 </div>
 
@@ -159,14 +158,14 @@ const GermanShepherdPage = ({ onBackClick }) => {
           </section>
 
           {/* Adaptability Section */}
-<section className="mb-12 bg-blue-100 p-8 rounded-lg shadow-md flex flex-col lg:flex-row items-center gap-8">
+<section className="mb-12 bg-cyan-200 p-8 rounded-lg shadow-md flex flex-col lg:flex-row items-center gap-8">
   {/* Left Text */}
   <div className="lg:w-1/3 text-center lg:text-left">
     <h2 className="text-3xl font-bold mb-4 text-gray-800 border-b-2 border-gray-400 pb-2">
       Adaptability
     </h2>
     <p className="text-lg text-gray-700">
-      Temperatures should be moderate for German Shepherds
+      Temperatures should be moderate for Rottweiler.
     </p>
   </div>
 
@@ -183,11 +182,11 @@ const GermanShepherdPage = ({ onBackClick }) => {
   <div className="lg:w-1/3 flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-6">
     <div className="text-center">
       <p className="text-2xl font-semibold text-gray-800">Hot Weather Tolerance:</p>
-      <p className="text-lg text-black font-bold">up to 28°C</p>
+      <p className="text-lg text-black font-bold">up to 21°C</p>
     </div>
     <div className="text-center">
       <p className="text-2xl font-semibold text-gray-800">Cold Weather Tolerance:</p>
-      <p className="text-lg text-black font-bold">up to 8°C</p>
+      <p className="text-lg text-black font-bold">up to 4°C</p>
     </div>
   </div>
 </section>
@@ -248,10 +247,10 @@ const GermanShepherdPage = ({ onBackClick }) => {
   {/* Text Section */}
   <div className="flex-1 text-left">
     <h2 className="text-xl font-bold text-gray-900 mb-1 underline decoration-red-500 decoration-2">
-      German Shepherd Diet
+      Rottweiler Diet
     </h2>
     <p className="text-gray-700">
-      Consider following tips when choosing food for your German Shepherds.
+      Consider following tips when choosing food for your Rottweiler.
     </p>
   </div>
 
@@ -273,15 +272,13 @@ const GermanShepherdPage = ({ onBackClick }) => {
   
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2">
+    <h2 className="font-bold text-gray-900 mb-2">
       1. Choose a protein-rich diet
-    </h3>
+    </h2>
     <p className="text-gray-700 mb-4">
-      German Shepherds have a high energy level and require 
-      <span className="italic"> a high protein diet</span>
-      to support their active lifestyle. Look for a diet with at least 18-25% protein for 
-      <span className="italic"> dry food </span>
-      adult German Shepherds and even more for growing puppies
+      Rottweilers are large and active breeds that require a high-protein diet to support their 
+      energy levels and muscle development. Look for high-quality dog food containing protein 
+      from sources like chicken, fish, or beef.
     </p>
   </div>
 
@@ -318,10 +315,10 @@ const GermanShepherdPage = ({ onBackClick }) => {
 
     {/* Tip 2 */}
     <div className="mb-8">
-      <h3 className="font-bold text-gray-900 mb-2">2. Avoid fillers & additives</h3>
+      <h2 className="font-bold text-gray-900 mb-2">2. Avoid fillers & additives</h2>
       <p className="text-gray-700 mb-4">
-        German Shepherds have a sensitive stomach and should avoid food that includes fillers such as
-        wheat and soy that are difficult to digest and may cause allergies.
+        Rottweilers have sensitive stomachs and can suffer from digestive issues. Avoid by-products, 
+        such as meat and bone meals, and fillers like corn, wheat & soy.
       </p>
       <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -356,11 +353,12 @@ const GermanShepherdPage = ({ onBackClick }) => {
   
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2">3. Consider their age</h3>
+    <h2 className="font-bold text-gray-900 mb-2">3. Consider their age</h2>
     <p className="text-gray-700 mb-4">
-      Choose an appropriate diet according to your German Shepherd's age, as puppies need more 
-      protein and fat for growth, while adult and senior dogs may require lower levels for weight 
-      maintenance.
+      Rottweilers have different nutritional needs at various stages of their life. 
+      Puppies need a diet higher in protein and fat to support their growth and development,
+      while adult dogs and senior dogs may need a diet lower in protein and fat to maintain
+      a healthy weight.
     </p>
   </div>
 
@@ -405,38 +403,36 @@ const GermanShepherdPage = ({ onBackClick }) => {
         {/* Diet/Health Section */}
         
           <section className="mb-12 bg-orange-50 p-8 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">German Shepherd Common health concerns</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Rottweiler Common health concerns</h2>
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="lg:w-1/2 flex flex-col justify-between">
-                <p className="text-lg text-gray-700 mb-6">
-                  German Shepherds are intelligent and athletic, but they can be susceptible 
-                  to breed-specific health conditions. Let's explore some common issues.
-                </p>
+                <h3 className="text-lg text-gray-700 mb-6 font-semibold">
+                  While Rottweilers are generally robust and resilient, there are certain conditions 
+                  they may be more prone to developing. Let's uncover some common problems:
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-2">Bloating/GDV</h3>
+                    <h3 className="text-xl font-semibold mb-2">Parvoviral enteritis</h3>
                     <p className="text-sm text-gray-600">
-                      German Shepherds are also prone to bloating, which occurs when the 
-                      stomach becomes filled with gas and twists on itself.
+                      Rott puppies are susceptible to PVGE infections, but these can be easily prevented through timely vaccinations.
                     </p>
                   </div>
                   <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold mb-2">Ear Infections</h3>
                     <p className="text-sm text-gray-600">
-                      is can result in symptoms like coughing and breathing difficulties.Ear infections 
-                      may occur due to their floppy ears that trap moisture and bacteria.
+                      Rottweilers are prone to ear infections due to their floppy ears
                     </p>
                   </div>
                   <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold mb-2">Osteoarthritis</h3>
                     <p className="text-sm text-gray-600">
-                      A condition that affects the joints, causing pain and stiffness, may occur in this breed
+                      They are prone to develop osteoarthritis due to their large size and heavy build.
                     </p>
                   </div>
                   <div className="p-4 bg-orange-100 rounded-lg shadow-sm col-span-1 md:col-span-2">
                     <h3 className="text-xl font-semibold mb-2">Allergies</h3>
                     <p className="text-sm text-gray-600">
-                      German Shepherds can suffer from skin and food allergies that cause itching, redness, and hair loss.
+                      Rottweilers can develop allergies to food or environmental allergens such as pollen or mold.
                     </p>
                   </div>
                 </div>
@@ -468,7 +464,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
         {/* Training Section */}
         <div ref={trainingRef}>
           <section className="mb-12 bg-gray-100 p-8 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">German Shepherd Training</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Rottweiler Training</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="md:order-last">
                 <img src={training1} 
@@ -480,12 +476,16 @@ const GermanShepherdPage = ({ onBackClick }) => {
               </div>
               <div>
                 <p className="text-lg text-gray-700 mb-6">
-                  German Shepherds thrive on regular exercise and mental stimulation. Here are some activities to keep them happy and healthy.
+                  Rottweilers, known for their intelligence, loyalty, and protective nature, 
+                  thrive when given proper guidance and training. Let's see some of the ways 
+                  you can do that.
                 </p>
                 <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Lots of physical exercise</h3>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Physical training and exercises</h3>
                   <p className="text-gray-600">
-                    German Shepherds require regular physical exercise. Include activities such as running, playing fetch, swimming, agility training, or hiking in their training regime.
+                    Rottweilers are large, high-energy dogs that require regular physical exercise. 
+                    Activities such as going for a run, playing fetch, or going for a hike will help 
+                    to keep them happy and healthy.
                   </p>
      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -512,10 +512,11 @@ const GermanShepherdPage = ({ onBackClick }) => {
                   
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">2. Engage in interactive play</h3>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">2. Interactive Play</h3>
                   <p className="text-gray-600">
-                    German Shepherds require mental stimulation to keep their minds active. Activities
-                    such as scent-retention games and puzzle toys are great options to keep them stimulated.
+                    Rottweilers are highly intelligent and require mental stimulation to keep them 
+                    engaged and prevent boredom. These can include training games such as hide and 
+                    seek, agility training, and puzzle toys.
                   </p>
     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -547,7 +548,9 @@ const GermanShepherdPage = ({ onBackClick }) => {
               <div className="md:w-2/3">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Train And Teach New Tricks</h3>
                 <p className="text-gray-600">
-                  Retrievers learn tricks easily and enjoy training which can be enhanced by using training treats for positive reinforcement and motivation.
+                  Basic obedience training is essential for rottweilers to grasp commands 
+                  like "sit," "stay," "come," "heel," and "down," which can be easily facilitated 
+                  by training treats.
                 </p>
                 <div className="mt-4 flex space-x-4">
                   <img src={training2} alt="Training treats" className="h-20 w-auto" loading='lazy'/>
@@ -566,12 +569,13 @@ const GermanShepherdPage = ({ onBackClick }) => {
 <div ref={groomingRef}>
   <section className="mb-12 bg-pink-100 p-8 rounded-lg shadow-md">
     <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">
-      German Shepherd Grooming
+      Rottweiler Grooming
     </h2>
     <div className="flex flex-col lg:flex-row items-center gap-8">
       <div className="lg:w-1/2 flex-shrink-0">
         <p className="text-lg text-gray-700 mb-6">
-          German Shepherds have relatively low grooming needs despite having dense and medium-length coats. Here are some essential tips to ensure they shine.
+          Regular grooming is beneficial for Rottweilers, despite their short
+          and dense fur. Let's explore key aspects of grooming a Rottweiler.
         </p>
       </div>
       <div className="lg:w-1/2">
@@ -595,7 +599,9 @@ const GermanShepherdPage = ({ onBackClick }) => {
     <div className="lg:w-1/2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">1. Brush and bath</h3>
       <p className="text-gray-600 leading-relaxed">
-        German Shepherds should be regularly brushed to remove loose hair and distribute natural oils. Occasional bathing is sufficient to keep them clean and fresh. Brushes-Combs Brushes & Combs Shampoos-conditioners Shampoos & conditioners
+        Regular brushing keeps their 'coats healthy, and shiny, distributes natural oils, 
+        and reduces shedding. While they don't need frequent baths, occasional bathing 
+        with mild dog shampoos ensures cleanliness and freshness.
 
       </p>
     </div>
@@ -655,7 +661,8 @@ const GermanShepherdPage = ({ onBackClick }) => {
     <div className="lg:w-1/2 order-2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">2. Keep their ear clean</h3>
       <p className="text-gray-600 leading-relaxed">
-        German Shepherds have ears prone to infections, so it's important to check their ears regularly and to clean them when required with a cotton ball and a mild ear-cleaning solution.
+        They have ears prone to infections, so it's important to check their ears regularly
+         and clean them when required with a cotton ball and a mild ear cleaning solution.
       </p>
     </div>
   </div>
@@ -666,7 +673,8 @@ const GermanShepherdPage = ({ onBackClick }) => {
     <div className="lg:w-1/2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">3. Keep their paws and nails clean</h3>
       <p className="text-gray-600 leading-relaxed">
-        To avoid discomfort and injury it's important to trim their nails regularly to keep them at a healthy length.
+        Their nails grow fast and become too long. Regular nail trims are 
+        essential to prevent discomfort and injury caused by overgrown nails.
       </p>
     </div>
     {/* Images */}
@@ -712,7 +720,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
           </div>
         </section>
 
-        <section className="relative bg-orange-200 rounded-lg">
+        <section className="relative bg-blue-200 rounded-lg">
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
     {/* Image Section */}
     <div className="md:w-1/2 w-full">
@@ -727,9 +735,9 @@ const GermanShepherdPage = ({ onBackClick }) => {
     {/* Text Section */}
     <div className="md:w-1/2 w-full p-8 flex items-center justify-center">
       <p className="text-black text-xl md:text-2xl font-semibold leading-relaxed text-center md:text-left">
-        German Shepherds are deeply loyal to their families and develop strong bonds with their
-        owners. Engage in activities they love: play, walks, training, and relaxation to strengthen
-        loyalty and affection.
+        Expose rottweilers to diverse people, animals, and environments early on. 
+        This fosters their social skills, 
+        prevents shyness or aggression, and cultivates them into adaptable and sociable companions.
       </p>
     </div>
   </div>
@@ -783,4 +791,4 @@ const GermanShepherdPage = ({ onBackClick }) => {
   );
 };
 
-export default GermanShepherdPage;
+export default LabradorPage;

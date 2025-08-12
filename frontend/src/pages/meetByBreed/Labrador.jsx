@@ -91,7 +91,7 @@ const LabradorPage = ({ onBackClick }) => {
         <img
           src={item.img}
           alt={item.label}
-          className="w-12 h-12 rounded-full object-cover transform hover:scale-105 transition-transform"
+          className="w-16 h-16 rounded-full object-cover transform hover:scale-105 transition-transform"
           loading='lazy'
         />
         <span className="font-semibold text-lg">{item.label}</span>
