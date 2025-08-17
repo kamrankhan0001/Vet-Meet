@@ -1,35 +1,37 @@
 import React, { useState, useRef } from 'react';
-import about from '../../assets/Categories/about.png';
-import diet from '../../assets/Categories/diet.png';
-import training from '../../assets/Categories/training.png';
-import grooming from '../../assets/Categories/grooming.png';
-import hero from '../../assets/Categories/hero.png';
-import Adaptability from '../../assets/Categories/adaptiblity.png';
-import grooming1 from '../../assets/Categories/grooming1.png';
-import paw from '../../assets/Categories/paw.png';
+
+import img1 from '../../assets/beagle/img1.png';
+import img2 from '../../assets/beagle/img2.png';
+import img3 from '../../assets/beagle/img3.png';
+import img4 from '../../assets/beagle/img4.png';
+import img5 from '../../assets/beagle/img5.png';
+import img6 from '../../assets/beagle/img6.png';
+import grooming1 from '../../assets/beagle/grooming1.png';
+import paw from '../../assets/beagle/paw.png';
 import brush from '../../assets/Categories/brush.png';
 import shampoo from '../../assets/Categories/shampoo.png';
-import training1 from '../../assets/Categories/training1.png';
-import training2 from '../../assets/Categories/training2.png';
-import health from '../../assets/Categories/health.png';
-import chickenfood from '../../assets/Categories/chickenfood.png';
-import fishfood from '../../assets/Categories/fishfood.png';
+import training1 from '../../assets/beagle/training1.png';
+import training2 from '../../assets/beagle/training2.png';
+import training3 from '../../assets/beagle/training3.png';
+import health from '../../assets/beagle/health.png';
+import chickenfood from '../../assets/beagle/dryfood.png';
+import fishfood from '../../assets/beagle/wetfood.png';
 import baked from '../../assets/Categories/bakedfood.png';
-import soy from '../../assets/Categories/soyfood.png';
-import puppy from '../../assets/Categories/puppyfood.png';
-import adult from '../../assets/Categories/adultfood.png';
-import senior from '../../assets/Categories/seniorfood.png';
+import soy from '../../assets/beagle/soyfood.png';
+import puppy from '../../assets/beagle/puppyfood.png';
+import adult from '../../assets/beagle/adultfood.png';
+import senior from '../../assets/beagle/seniorfood.png';
 import diet2 from '../../assets/Categories/diet2.png';
-import rope from '../../assets/Categories/rope.png';
+import rope from '../../assets/Labrador/rope.png';
 import leashes from '../../assets/Categories/leashes.png';
-import toy from '../../assets/Categories/toy.png';
-import interactive from '../../assets/Categories/interactive.png';
-import puzzle from '../../assets/Categories/puzzle.png';
-import chew from '../../assets/Categories/chew.png';
-import ear from '../../assets/Categories/ear.png';
+import toy from '../../assets/Rottweiler/toy.png';
+import interactive from '../../assets/Rottweiler/interactive.png';
+import puzzle from '../../assets/Labrador/puzzle.png';
+import chew from '../../assets/beagle/chew.png';
+import ear from '../../assets/beagle/ear.png';
 
 
-const GoldenRetrieverPage = ({ onBackClick }) => {
+const BeaglePage = ({ onBackClick }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   // Refs for each section to enable scrolling
@@ -43,19 +45,29 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   };
 
   const faqData = [
-    {
-      question: 'Are Golden Retrievers aggressive?',
-      answer: 'Golden Retrievers are generally not aggressive. They are known for their friendly, patient, and gentle nature, making them excellent family pets. Aggression in any dog breed is usually the result of poor training, socialization, or underlying health issues.'
-    },
-    {
-      question: 'What kind of weather is ideal for Golden Retrievers?',
-      answer: 'Golden Retrievers do best in moderate climates. Their thick, double coats provide good protection in colder weather, but they can be sensitive to extreme heat. It\'s important to provide them with shade and fresh water during hot weather.'
-    },
-    {
-      question: 'Do Golden Retrievers get along with other pets?',
-      answer: 'Yes, Golden Retrievers are typically very social and get along well with other dogs and pets, especially when properly socialized from a young age.'
-    }
-  ];
+  {
+    question: 'Do Beagles shed a lot?',
+    answer: 'Beagles have a short double coat that sheds moderately year-round, with heavier shedding during seasonal changes. Regular brushing can help reduce loose hair and keep their coat healthy.'
+  },
+  {
+    question: 'How much exercise do Beagles need?',
+    answer: 'Beagles are active and energetic dogs that require at least an hour of daily exercise. This can include walks, playtime, and activities that stimulate their mind and body.'
+  },
+  {
+    question: 'Are Beagles good with other dogs?',
+    answer: 'Yes, Beagles are generally good with other dogs, thanks to their pack instincts. They enjoy companionship and often thrive in multi-dog households when properly socialized.'
+  },
+  {
+    question: 'Do Beagles bark a lot?',
+    answer: 'Beagles are vocal dogs and may bark or howl frequently, especially when they catch an interesting scent or are left alone for long periods. Training and adequate exercise can help manage excessive barking.'
+  },
+  {
+    question: 'Is a Beagle a good guard dog?',
+    answer: 'Beagles are alert and will bark to signal unfamiliar activity, but they are too friendly to be considered effective guard dogs. They are better suited as family companions than protectors.'
+  }
+];
+
+
 
   // Function to handle smooth scrolling to a section
   const scrollToSection = (ref) => {
@@ -74,10 +86,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 <nav className="sticky top-0 bg-white z-10 shadow-md">
   <div className="max-w-6xl mx-auto flex justify-around py-3">
     {[
-      { ref: aboutRef, img: about, label: "About" },
-      { ref: dietRef, img: diet, label: "Diet" },
-      { ref: trainingRef, img: training, label: "Training" },
-      { ref: groomingRef, img: grooming, label: "Grooming" }
+      { ref: aboutRef, img: img1, label: "About" },
+      { ref: dietRef, img: img2, label: "Diet" },
+      { ref: trainingRef, img: img3, label: "Training" },
+      { ref: groomingRef, img: img4, label: "Grooming" }
     ].map((item, idx) => (
       <button
         key={idx}
@@ -100,21 +112,22 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
         {/* About Section - Combined from initial overview and traits */}
         <div ref={aboutRef}>
           {/* Breed Overview Section */}
-          <section className="mb-12 bg-gradient-to-r from-yellow-300 to-yellow-400 p-8 rounded-xl shadow-lg flex flex-col lg:flex-row items-center gap-8">
+          <section className="mb-12 bg-gradient-to-r from-orange-200 to-orange-300 p-8 rounded-xl shadow-lg flex flex-col lg:flex-row items-center gap-8">
   {/* Text Section */}
   <div className="lg:w-1/2 flex-shrink-0 text-center lg:text-left">
     <h2 className="text-4xl font-extrabold mb-4 text-gray-900 leading-snug">
-      Golden Retrievers Are The Real Deal: Non-Stop Fun!
+     Beagles:The Curious Canine Detectives
     </h2>
     <p className="text-lg text-gray-800 max-w-lg mx-auto lg:mx-0">
-      Retrievers are originally from Scotland, where they were bred for hunting.
+      Scent-Seeking Navigators of Old England, following their noses with 
+      wagging tails and inquisitive ears.
     </p>
   </div>
 
   {/* Image Section */}
   <div className="lg:w-1/2 flex justify-center">
     <img
-      src={hero}
+      src={img5}
       alt="Golden Retriever"
       className="w-72 sm:w-80 lg:w-96 rounded-xl transform hover:scale-105 transition-transform duration-300"
     />
@@ -125,30 +138,29 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 
 
           {/* Detailed Characteristics Section */}
-          <section className="mb-12 bg-green-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row gap-8 text-gray-800">
+          <section className="mb-12 bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row gap-8 text-gray-800">
             <div className="md:w-1/2">
-              <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat: Curly & wavy</h3>
-              <p className="text-lg mb-2"><span className="font-semibold">Shedding:</span> High</p>
-              <p className="text-lg mb-2"><span className="font-semibold">Size:</span> Medium</p>
-              <p className="text-lg mb-2"><span className="font-semibold">Life Expectancy:</span> 10-12 years</p>
+              <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat: Short and dense</h3>
+              <p className="text-lg mb-2"><span className="font-semibold">Shedding:</span> Medium</p>
+              <p className="text-lg mb-2"><span className="font-semibold">Size:</span>Small</p>
+              <p className="text-lg mb-2"><span className="font-semibold">Life Expectancy:</span> 8-10 years</p>
             </div>
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat Colours</h3>
               <div className="flex space-x-4 mb-4">
-                <span className="bg-yellow-400 text-black font-semibold px-4 py-1 rounded-full">Golden</span>
-                <span className="bg-yellow-200 text-black font-semibold px-4 py-1 rounded-full">Light Golden</span>
-                <span className="bg-yellow-800 text-white font-semibold px-4 py-1 rounded-full">Dark Golden</span>
+                <span className="bg-[#D2B48C] text-black font-semibold px-4 py-1 rounded-full">Black With Tan Markings</span>
+                
               </div>
               <div className="mb-4">
   <div className="grid grid-cols-3 gap-4 text-lg mb-2">
     <span className="font-semibold">Weight:</span>
-    <span>30-34 kgs <span className='font-bold'>(male)</span></span>
-    <span>24-29 kgs <span className='font-bold'>(female)</span></span>
+    <span>10-11 kgs (male)</span>
+    <span>9-10 kgs (female)</span>
   </div>
   <div className="grid grid-cols-3 gap-4 text-lg">
     <span className="font-semibold">Height:</span>
-    <span>61-66 cm <span className='font-bold'>(male)</span></span>
-    <span>56-61 cm <span className='font-bold'>(female)</span></span>
+    <span>36-41 cm (male)</span>
+    <span>33-38 cm (female)</span>
   </div>
 </div>
 
@@ -156,21 +168,21 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
           </section>
 
           {/* Adaptability Section */}
-<section className="mb-12 bg-blue-100 p-8 rounded-lg shadow-md flex flex-col lg:flex-row items-center gap-8">
+<section className="mb-12 bg-cyan-200 p-8 rounded-lg shadow-md flex flex-col lg:flex-row items-center gap-8">
   {/* Left Text */}
   <div className="lg:w-1/3 text-center lg:text-left">
     <h2 className="text-3xl font-bold mb-4 text-gray-800 border-b-2 border-gray-400 pb-2">
       Adaptability
     </h2>
     <p className="text-lg text-gray-700">
-      Temperatures should be moderate for Golden Retrievers.
+      Temperatures should be moderate for Beagles.
     </p>
   </div>
 
   {/* Center Image */}
   <div className="lg:w-1/3 flex justify-center">
     <img
-      src={Adaptability} // replace with your image variable or URL
+      src={img6} // replace with your image variable or URL
       alt="Golden Retriever Adaptability"
       className="w-48 sm:w-56 lg:w-64 object-cover"
     />
@@ -184,7 +196,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     </div>
     <div className="text-center">
       <p className="text-2xl font-semibold text-gray-800">Cold Weather Tolerance:</p>
-      <p className="text-lg text-black font-bold">up to -6.7°C</p>
+      <p className="text-lg text-black font-bold">up to 10°C</p>
     </div>
   </div>
 </section>
@@ -207,7 +219,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
       { score: "5", label: "Friendliness" },
       { score: "5", label: "Good With Other Dogs" },
       { score: "5", label: "Good With Kids" },
-      { score: "3", label: "Barking Tendencies" },
+      { score: "4", label: "Barking Tendencies" },
       { score: "4", label: "Energy Level" },
       { score: "4", label: "Playfulness" }
     ].map((trait, i) => (
@@ -234,7 +246,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <p className="text-xl font-semibold text-center sm:text-left">
       Good For First-Time Pet Parents
     </p>
-    <div className="text-4xl font-extrabold">9/10</div>
+    <div className="text-4xl font-extrabold">10/10</div>
   </div>
   
 
@@ -245,10 +257,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   {/* Text Section */}
   <div className="flex-1 text-left">
     <h2 className="text-xl font-bold text-gray-900 mb-1 underline decoration-red-500 decoration-2">
-      Golden Retriever Diet
+      Beagle Diet
     </h2>
     <p className="text-gray-700">
-      Consider following tips when choosing food for your golden retriever.
+      Consider following tips when choosing food for your Beagles.
     </p>
   </div>
 
@@ -270,23 +282,20 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2">
-      1. Choose a protein-rich diet
-    </h3>
+    <h2 className="font-bold text-gray-900 mb-2">
+      1. Choose a balanced diet
+    </h2>
     <p className="text-gray-700 mb-4">
-      Since Golden Retrievers are medium to large in size, they require a diet that is 
-      <span className="italic"> high in protein </span>
-      to support their muscle mass and energy needs. Look for 
-      <span className="italic"> dry food </span>
-      that is made with high-quality, easily digestible protein sources like real meat or fish.
+      A balanced diet is essential for a Beagle's overall health and well-being. 
+      High-quality dry kibble or wet food specifically formulated for small breeds is recommended.
     </p>
   </div>
 
   {/* Image Section */}
   <div className="flex-shrink-0 flex gap-4 flex-wrap justify-center">
   {[
-    { img: chickenfood, label: "Chicken based food", link: "#" },
-    { img: fishfood, label: "Fish based food", link: "#" },
+    { img: chickenfood, label: "Dry Food", link: "#" },
+    { img: fishfood, label: "Wet Food", link: "#" },
   ].map((item, idx) => (
     <a
       key={idx}
@@ -315,11 +324,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 
     {/* Tip 2 */}
     <div className="mb-8">
-      <h3 className="font-bold text-gray-900 mb-2">2. Avoid fillers & additives</h3>
+      <h2 className="font-bold text-gray-900 mb-2">2. Avoid fillers & additives</h2>
       <p className="text-gray-700 mb-4">
-        Most commercial dog food contains fillers like corn, wheat, and soy which can be difficult
-        for them to digest and may cause allergies. Choose dog food that is made with whole, natural
-        ingredients and free from unnecessary additives.
+        Beagles are prone to food allergies and sensitivities, 
+        so it's important to choose high-quality dog food with ingredients such as meat and vegetables.
       </p>
       <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -354,12 +362,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2">3. Consider their age</h3>
+    <h2 className="font-bold text-gray-900 mb-2">3. Consider their age</h2>
     <p className="text-gray-700 mb-4">
-      The nutritional needs of puppies are different from those of adult dogs. 
-      A puppy’s diet should be higher in protein and calories to support their rapid 
-      growth and development. Diet for an adult dog should be formulated to meet 
-      their maintenance needs.
+      Beagles are a small breed and their dietary needs can vary.
+      It’s important to choose food that is appropriate for their age and size.
     </p>
   </div>
 
@@ -403,30 +409,37 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 
         {/* Diet/Health Section */}
         
-          <section className="mb-12 bg-lime-100 p-8 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Golden Retriever Common Health Concerns</h2>
+          <section className="mb-12 bg-orange-50 p-8 rounded-lg shadow-md">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Beagle Common health concerns</h2>
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="lg:w-1/2 flex flex-col justify-between">
-                <p className="text-lg text-gray-700 mb-6">
-                  Generally, Golden Retrievers are healthy dogs, but like all breeds, they too are prone to certain health issues. Scroll to know what they are.
-                </p>
+                <h3 className="text-lg text-gray-700 mb-6 font-semibold">
+                  Beagles are generally healthy and hardy dogs, but there are specific 
+                  conditions they may be more prone to:
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 bg-lime-200 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-2">Hip and elbow dysplasia</h3>
+                  <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold mb-2">Obesity</h3>
                     <p className="text-sm text-gray-600">
-                      This affects the development of the hip and elbow joints and can cause pain and mobility issues.
+                      Beagles tend to become overweight due to their genetic predisposition.
                     </p>
                   </div>
-                  <div className="p-4 bg-lime-200 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-2">Heart disease</h3>
+                  <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold mb-2">Dental issues</h3>
                     <p className="text-sm text-gray-600">
-                      This can result in symptoms like coughing and breathing difficulties.
+                      Dental issues such as tartar build-up and periodontal disease are common in Beagles.
                     </p>
                   </div>
-                  <div className="p-4 bg-lime-200 rounded-lg shadow-sm col-span-1 md:col-span-2">
+                  <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold mb-2">Hip Dysplasia</h3>
+                    <p className="text-sm text-gray-600">
+                      Hip dysplasia is a genetic condition that affects the hip joint and can cause pain and lameness.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-orange-100 rounded-lg shadow-sm col-span-1 md:col-span-2">
                     <h3 className="text-xl font-semibold mb-2">Allergies</h3>
                     <p className="text-sm text-gray-600">
-                      Allergies can cause itching and hot spots.
+                      Beagles can be prone to food allergies and sensitivities.
                     </p>
                   </div>
                 </div>
@@ -441,7 +454,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
                 />
               </div>
             </div>
-            <div className="mt-8 bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center justify-between">
+            <div className="mt-8 bg-orange-100 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center justify-between">
               <div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Does your Retriever have a health issue?</h3>
                 <p className="text-gray-600">
@@ -458,7 +471,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
         {/* Training Section */}
         <div ref={trainingRef}>
           <section className="mb-12 bg-gray-100 p-8 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Golden Retriever Training</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Beagles Training</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="md:order-last">
                 <img src={training1} 
@@ -470,14 +483,14 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
               </div>
               <div>
                 <p className="text-lg text-gray-700 mb-6">
-                  Golden Retrievers are intelligent and active dogs that require plenty of mental and physical
-                  stimulation to stay healthy and happy. Here are some ways you can ensure they stay stimulated.
+                  In order to keep Beagles content and in good shape, regular physical and mental engagement is crucial. 
+                  Here are some exercises and activities to keep their lively spirits thriving.
                 </p>
                 <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Lots of physical exercise</h3>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Physical training and exercises</h3>
                   <p className="text-gray-600">
-                    Retrievers are known for their high energy levels, so it's crucial to provide them with enough
-                    opportunities for physical exercises such as walks, runs, hikes and playtime with toys.
+                    Beagles are active and energetic dogs that require regular physical exercise. 
+                    These can include activities such as going for a run, playing fetch, or going for a hike.
                   </p>
      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -504,11 +517,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
                   
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">2. Engage in interactive play</h3>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">2. Interactive Play</h3>
                   <p className="text-gray-600">
-                    Retrievers require regular mental and physical stimulation. Activities such as obedience and agility
-                    training, interactive toys, puzzle toys can keep them mentally stimulated. Chew toys, plush toys, and
-                    scent-based toys can also be used to keep them engaged and happy.
+                    Beagles have a strong desire to explore and are known to be curious dogs, so it's important 
+                    to provide them with mental stimulation through interactive toys, puzzles, and training exercises.
                   </p>
     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -540,7 +552,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
               <div className="md:w-2/3">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Train And Teach New Tricks</h3>
                 <p className="text-gray-600">
-                  Retrievers learn tricks easily and enjoy training which can be enhanced by using training treats for positive reinforcement and motivation.
+                  Beagles are highly trainable, and using training treats improves their 
+                  obedience and behaviour for basic commands like ‘sit,’ ‘stay,’ ‘come,’ ‘heel,’ and ‘down.’
                 </p>
                 <div className="mt-4 flex space-x-4">
                   <img src={training2} alt="Training treats" className="h-20 w-auto" loading='lazy'/>
@@ -559,12 +572,13 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 <div ref={groomingRef}>
   <section className="mb-12 bg-pink-100 p-8 rounded-lg shadow-md">
     <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">
-      Golden Retriever Grooming
+      Beagle Grooming
     </h2>
     <div className="flex flex-col lg:flex-row items-center gap-8">
       <div className="lg:w-1/2 flex-shrink-0">
         <p className="text-lg text-gray-700 mb-6">
-          Golden Retrievers have thick, double coats that require regular grooming. Here are some tips for taking better care of their skin and coat.
+          Grooming Beagles is a relatively straightforward process due to their short and dense coat.
+          Let's explore some key aspects of grooming for Beagles.
         </p>
       </div>
       <div className="lg:w-1/2">
@@ -588,8 +602,9 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <div className="lg:w-1/2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">1. Brush and bath</h3>
       <p className="text-gray-600 leading-relaxed">
-        Regularly brush and bathe golden retrievers as they have a thick water-repellent coat.
-        Use mild shampoo to maintain coat turnover, help distribute oils, and reduce shedding.
+        Brush Beagles' coats weekly to keep them shiny, healthy, 
+        and minimise shedding. Bathe them occasionally using mild shampoo for cleanliness and freshness.
+
       </p>
     </div>
     {/* Images */}
@@ -648,8 +663,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <div className="lg:w-1/2 order-2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">2. Keep their ear clean</h3>
       <p className="text-gray-600 leading-relaxed">
-        Use a veterinarian-approved ear cleaning solution to gently clean the inside of your
-        golden retriever's ears, being careful not to insert the cleaner too far.
+        It's important to check their ears 
+        regularly and clean them as needed with a cotton ball and a mild ear-cleaning solution.
       </p>
     </div>
   </div>
@@ -660,9 +675,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <div className="lg:w-1/2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">3. Keep their paws and nails clean</h3>
       <p className="text-gray-600 leading-relaxed">
-        Regularly check your golden retriever’s paws for dirt, debris, or small cuts,
-        and gently wipe them with a pet-safe wipe or damp cloth. Trim their nails every few weeks
-        to prevent overgrowth, which can cause discomfort or affect their walking.
+        Their nails grow fast and become too long. Regular nail trims are 
+        essential to prevent discomfort and injury caused by overgrown nails.
       </p>
     </div>
     {/* Images */}
@@ -707,6 +721,30 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
             </div>
           </div>
         </section>
+
+        <section className="relative bg-blue-200 rounded-lg">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+    {/* Image Section */}
+    <div className="md:w-1/2 w-full">
+      <img
+        src={training3} // replace with your image path
+        alt="German Shepherd"
+        className="w-full h-full object-cover"
+        loading='lazy'
+      />
+    </div>
+
+    {/* Text Section */}
+    <div className="md:w-1/2 w-full p-8 flex items-center justify-center">
+      <p className="text-black text-xl md:text-2xl font-semibold leading-relaxed text-center md:text-left">
+        Beagles, possess an extraordinary sense of smell.
+        Unleash their historical hunting prowess by incorporating scent
+        training activities like tracking, search and rescue, into their training regimen.
+      </p>
+    </div>
+  </div>
+</section>
+
 
         {/* FAQ Section */}
         <section className="py-12">
@@ -755,4 +793,4 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   );
 };
 
-export default GoldenRetrieverPage;
+export default BeaglePage;

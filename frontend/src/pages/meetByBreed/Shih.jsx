@@ -1,35 +1,37 @@
 import React, { useState, useRef } from 'react';
-import about from '../../assets/Categories/about.png';
-import diet from '../../assets/Categories/diet.png';
-import training from '../../assets/Categories/training.png';
-import grooming from '../../assets/Categories/grooming.png';
-import hero from '../../assets/Categories/hero.png';
-import Adaptability from '../../assets/Categories/adaptiblity.png';
-import grooming1 from '../../assets/Categories/grooming1.png';
-import paw from '../../assets/Categories/paw.png';
+import img1 from '../../assets/shih/img1.png';
+import img2 from '../../assets/shih/img2.png';
+import img3 from '../../assets/shih/img3.png';
+import img4 from '../../assets/shih/img4.png';
+import img5 from '../../assets/shih/img5.png';
+import img6 from '../../assets/shih/img6.png';
+import grooming1 from '../../assets/shih/grooming1.png';
+import paw from '../../assets/shih/paw.png';
 import brush from '../../assets/Categories/brush.png';
 import shampoo from '../../assets/Categories/shampoo.png';
-import training1 from '../../assets/Categories/training1.png';
-import training2 from '../../assets/Categories/training2.png';
-import health from '../../assets/Categories/health.png';
-import chickenfood from '../../assets/Categories/chickenfood.png';
-import fishfood from '../../assets/Categories/fishfood.png';
+import training1 from '../../assets/shih/training1.png';
+import training2 from '../../assets/Rottweiler/training2.png';
+import training3 from '../../assets/shih/training3.png';
+import health from '../../assets/shih/health.png';
+import chickenfood from '../../assets/shih/chickenfood.png';
+import fishfood from '../../assets/shih/fishfood.png';
 import baked from '../../assets/Categories/bakedfood.png';
-import soy from '../../assets/Categories/soyfood.png';
-import puppy from '../../assets/Categories/puppyfood.png';
-import adult from '../../assets/Categories/adultfood.png';
-import senior from '../../assets/Categories/seniorfood.png';
+import soy from '../../assets/shih/soyfood.png';
+import puppy from '../../assets/shih/puppyfood.png';
+import adult from '../../assets/shih/adultfood.png';
+import senior from '../../assets/shih/seniorfood.png';
 import diet2 from '../../assets/Categories/diet2.png';
-import rope from '../../assets/Categories/rope.png';
+import rope from '../../assets/Labrador/rope.png';
 import leashes from '../../assets/Categories/leashes.png';
-import toy from '../../assets/Categories/toy.png';
-import interactive from '../../assets/Categories/interactive.png';
-import puzzle from '../../assets/Categories/puzzle.png';
-import chew from '../../assets/Categories/chew.png';
-import ear from '../../assets/Categories/ear.png';
+import toy from '../../assets/Rottweiler/toy.png';
+import interactive from '../../assets/Rottweiler/interactive.png';
+import puzzle from '../../assets/Labrador/puzzle.png';
+import chew from '../../assets/Labrador/chew.png';
+import ear from '../../assets/shih/ear.png';
+import dental from '../../assets/shih/dental.png';
 
 
-const GoldenRetrieverPage = ({ onBackClick }) => {
+const LabradorPage = ({ onBackClick }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   // Refs for each section to enable scrolling
@@ -43,19 +45,29 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   };
 
   const faqData = [
-    {
-      question: 'Are Golden Retrievers aggressive?',
-      answer: 'Golden Retrievers are generally not aggressive. They are known for their friendly, patient, and gentle nature, making them excellent family pets. Aggression in any dog breed is usually the result of poor training, socialization, or underlying health issues.'
-    },
-    {
-      question: 'What kind of weather is ideal for Golden Retrievers?',
-      answer: 'Golden Retrievers do best in moderate climates. Their thick, double coats provide good protection in colder weather, but they can be sensitive to extreme heat. It\'s important to provide them with shade and fresh water during hot weather.'
-    },
-    {
-      question: 'Do Golden Retrievers get along with other pets?',
-      answer: 'Yes, Golden Retrievers are typically very social and get along well with other dogs and pets, especially when properly socialized from a young age.'
-    }
-  ];
+  {
+    question: 'Do Shih Tzus shed a lot?',
+    answer: 'Shih Tzus have a long, luxurious double coat that sheds minimally. However, their coat requires regular grooming to prevent tangles and mats. Brushing several times a week is recommended.'
+  },
+  {
+    question: 'How much exercise do Shih Tzus need?',
+    answer: 'Shih Tzus are small, companion dogs that need moderate exercise. A couple of short walks and some indoor playtime each day are usually enough to keep them healthy and happy.'
+  },
+  {
+    question: 'Are Shih Tzus good with other dogs?',
+    answer: 'Yes, Shih Tzus are generally friendly and get along well with other dogs and pets when socialized properly. They enjoy companionship but also love attention from their family.'
+  },
+  {
+    question: 'Do Shih Tzus bark a lot?',
+    answer: 'Shih Tzus can be alert and may bark to signal visitors or unusual noises. While not excessive barkers by nature, they can develop barking habits if left alone or not trained early.'
+  },
+  {
+    question: 'Is a Shih Tzu a good guard dog?',
+    answer: 'Shih Tzus are watchful and may alert their owners to strangers, but their small size and affectionate temperament make them better companions than guard dogs.'
+  }
+];
+
+
 
   // Function to handle smooth scrolling to a section
   const scrollToSection = (ref) => {
@@ -74,10 +86,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 <nav className="sticky top-0 bg-white z-10 shadow-md">
   <div className="max-w-6xl mx-auto flex justify-around py-3">
     {[
-      { ref: aboutRef, img: about, label: "About" },
-      { ref: dietRef, img: diet, label: "Diet" },
-      { ref: trainingRef, img: training, label: "Training" },
-      { ref: groomingRef, img: grooming, label: "Grooming" }
+      { ref: aboutRef, img: img1, label: "About" },
+      { ref: dietRef, img: img2, label: "Diet" },
+      { ref: trainingRef, img: img3, label: "Training" },
+      { ref: groomingRef, img: img4, label: "Grooming" }
     ].map((item, idx) => (
       <button
         key={idx}
@@ -100,21 +112,21 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
         {/* About Section - Combined from initial overview and traits */}
         <div ref={aboutRef}>
           {/* Breed Overview Section */}
-          <section className="mb-12 bg-gradient-to-r from-yellow-300 to-yellow-400 p-8 rounded-xl shadow-lg flex flex-col lg:flex-row items-center gap-8">
+          <section className="mb-12 bg-gradient-to-r from-orange-200 to-orange-300 p-8 rounded-xl shadow-lg flex flex-col lg:flex-row items-center gap-8">
   {/* Text Section */}
   <div className="lg:w-1/2 flex-shrink-0 text-center lg:text-left">
     <h2 className="text-4xl font-extrabold mb-4 text-gray-900 leading-snug">
-      Golden Retrievers Are The Real Deal: Non-Stop Fun!
+     Shih Tzu:Fashionistas with Fluffy Elegance and Tail-Wagging Charm!
     </h2>
     <p className="text-lg text-gray-800 max-w-lg mx-auto lg:mx-0">
-      Retrievers are originally from Scotland, where they were bred for hunting.
+      Majestic Heritage From Tibet And Favourites Of The Chinese Royals
     </p>
   </div>
 
   {/* Image Section */}
   <div className="lg:w-1/2 flex justify-center">
     <img
-      src={hero}
+      src={img5}
       alt="Golden Retriever"
       className="w-72 sm:w-80 lg:w-96 rounded-xl transform hover:scale-105 transition-transform duration-300"
     />
@@ -125,30 +137,30 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 
 
           {/* Detailed Characteristics Section */}
-          <section className="mb-12 bg-green-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row gap-8 text-gray-800">
+          <section className="mb-12 bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row gap-8 text-gray-800">
             <div className="md:w-1/2">
-              <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat: Curly & wavy</h3>
-              <p className="text-lg mb-2"><span className="font-semibold">Shedding:</span> High</p>
-              <p className="text-lg mb-2"><span className="font-semibold">Size:</span> Medium</p>
-              <p className="text-lg mb-2"><span className="font-semibold">Life Expectancy:</span> 10-12 years</p>
+              <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat: Long and Silky</h3>
+              <p className="text-lg mb-2"><span className="font-semibold">Shedding:</span> Light</p>
+              <p className="text-lg mb-2"><span className="font-semibold">Size:</span>Small</p>
+              <p className="text-lg mb-2"><span className="font-semibold">Life Expectancy:</span> 10-16 years</p>
             </div>
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold mb-4 border-b border-gray-400 pb-2">Coat Colours</h3>
               <div className="flex space-x-4 mb-4">
-                <span className="bg-yellow-400 text-black font-semibold px-4 py-1 rounded-full">Golden</span>
-                <span className="bg-yellow-200 text-black font-semibold px-4 py-1 rounded-full">Light Golden</span>
-                <span className="bg-yellow-800 text-white font-semibold px-4 py-1 rounded-full">Dark Golden</span>
+                <span className="bg-[#C7C7C6] text-black font-semibold px-4 py-1 rounded-full">Black & White</span>
+                <span className="bg-[#D2B48C] text-black font-semibold px-4 py-1 rounded-full">Gold & White</span>
+                
               </div>
               <div className="mb-4">
   <div className="grid grid-cols-3 gap-4 text-lg mb-2">
     <span className="font-semibold">Weight:</span>
-    <span>30-34 kgs <span className='font-bold'>(male)</span></span>
-    <span>24-29 kgs <span className='font-bold'>(female)</span></span>
+    <span>4-7 kgs (male)</span>
+    <span>3-6 kgs (female)</span>
   </div>
   <div className="grid grid-cols-3 gap-4 text-lg">
     <span className="font-semibold">Height:</span>
-    <span>61-66 cm <span className='font-bold'>(male)</span></span>
-    <span>56-61 cm <span className='font-bold'>(female)</span></span>
+    <span>20-28 cm (male)</span>
+    <span>20-28 cm (female)</span>
   </div>
 </div>
 
@@ -156,21 +168,21 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
           </section>
 
           {/* Adaptability Section */}
-<section className="mb-12 bg-blue-100 p-8 rounded-lg shadow-md flex flex-col lg:flex-row items-center gap-8">
+<section className="mb-12 bg-cyan-200 p-8 rounded-lg shadow-md flex flex-col lg:flex-row items-center gap-8">
   {/* Left Text */}
   <div className="lg:w-1/3 text-center lg:text-left">
     <h2 className="text-3xl font-bold mb-4 text-gray-800 border-b-2 border-gray-400 pb-2">
       Adaptability
     </h2>
     <p className="text-lg text-gray-700">
-      Temperatures should be moderate for Golden Retrievers.
+      Temperatures should be cool to moderate for Shih Tzus
     </p>
   </div>
 
   {/* Center Image */}
   <div className="lg:w-1/3 flex justify-center">
     <img
-      src={Adaptability} // replace with your image variable or URL
+      src={img6} // replace with your image variable or URL
       alt="Golden Retriever Adaptability"
       className="w-48 sm:w-56 lg:w-64 object-cover"
     />
@@ -180,11 +192,11 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   <div className="lg:w-1/3 flex flex-col sm:flex-row lg:flex-col items-center justify-center gap-6">
     <div className="text-center">
       <p className="text-2xl font-semibold text-gray-800">Hot Weather Tolerance:</p>
-      <p className="text-lg text-black font-bold">up to 30°C</p>
+      <p className="text-lg text-black font-bold">up to 25°C</p>
     </div>
     <div className="text-center">
       <p className="text-2xl font-semibold text-gray-800">Cold Weather Tolerance:</p>
-      <p className="text-lg text-black font-bold">up to -6.7°C</p>
+      <p className="text-lg text-black font-bold">up to 10°C</p>
     </div>
   </div>
 </section>
@@ -204,11 +216,11 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   {/* Traits Grid */}
   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center">
     {[
-      { score: "5", label: "Friendliness" },
-      { score: "5", label: "Good With Other Dogs" },
-      { score: "5", label: "Good With Kids" },
+      { score: "4", label: "Friendliness" },
+      { score: "4", label: "Good With Other Dogs" },
+      { score: "4", label: "Good With Kids" },
       { score: "3", label: "Barking Tendencies" },
-      { score: "4", label: "Energy Level" },
+      { score: "3", label: "Energy Level" },
       { score: "4", label: "Playfulness" }
     ].map((trait, i) => (
       <div
@@ -244,11 +256,11 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <div className="flex flex-col md:flex-row items-center md:items-start gap-6 rounded-lg p-4">
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h2 className="text-xl font-bold text-gray-900 mb-1 underline decoration-red-500 decoration-2">
-      Golden Retriever Diet
+    <h2 className="text-2xl font-bold text-gray-900 mb-1 underline decoration-red-500 decoration-2">
+      Shih Tzus Diet
     </h2>
-    <p className="text-gray-700">
-      Consider following tips when choosing food for your golden retriever.
+    <p className="text-gray-700 text-xl">
+      Consider following tips when choosing food for your Shih Tzus.
     </p>
   </div>
 
@@ -270,15 +282,12 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2">
+    <h2 className="font-bold text-gray-900 mb-2 text-2xl">
       1. Choose a protein-rich diet
-    </h3>
-    <p className="text-gray-700 mb-4">
-      Since Golden Retrievers are medium to large in size, they require a diet that is 
-      <span className="italic"> high in protein </span>
-      to support their muscle mass and energy needs. Look for 
-      <span className="italic"> dry food </span>
-      that is made with high-quality, easily digestible protein sources like real meat or fish.
+    </h2>
+    <p className="text-gray-700 mb-4 text-xl">
+      Opt for protein-rich dog food with quality animal protein sources 
+      like chicken or fish as the main ingredients to support Shih Tzu's muscle maintenance.
     </p>
   </div>
 
@@ -315,11 +324,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 
     {/* Tip 2 */}
     <div className="mb-8">
-      <h3 className="font-bold text-gray-900 mb-2">2. Avoid fillers & additives</h3>
-      <p className="text-gray-700 mb-4">
-        Most commercial dog food contains fillers like corn, wheat, and soy which can be difficult
-        for them to digest and may cause allergies. Choose dog food that is made with whole, natural
-        ingredients and free from unnecessary additives.
+      <h2 className="font-bold text-gray-900 mb-2 text-2xl">2. Avoid fillers & additives</h2>
+      <p className="text-gray-700 mb-4 text-xl">
+        Shih tzus have a sensitive stomach and are prone to allergies, 
+        hence avoid food that contains fillers like corn, wheat, or soy for optimal health.
       </p>
       <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -354,12 +362,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2">3. Consider their age</h3>
-    <p className="text-gray-700 mb-4">
-      The nutritional needs of puppies are different from those of adult dogs. 
-      A puppy’s diet should be higher in protein and calories to support their rapid 
-      growth and development. Diet for an adult dog should be formulated to meet 
-      their maintenance needs.
+    <h2 className="font-bold text-gray-900 mb-2 text-2xl">3. Consider their age</h2>
+    <p className="text-gray-700 mb-4 text-xl">
+      Choose dog food specifically formulated
+      for small breeds for all life stages, including small kibble sizes and wet dog food.
     </p>
   </div>
 
@@ -403,30 +409,37 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 
         {/* Diet/Health Section */}
         
-          <section className="mb-12 bg-lime-100 p-8 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Golden Retriever Common Health Concerns</h2>
+          <section className="mb-12 bg-orange-50 p-8 rounded-lg shadow-md">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Shih Tzus Common health concerns</h2>
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="lg:w-1/2 flex flex-col justify-between">
-                <p className="text-lg text-gray-700 mb-6">
-                  Generally, Golden Retrievers are healthy dogs, but like all breeds, they too are prone to certain health issues. Scroll to know what they are.
-                </p>
+                <h3 className="text-lg text-gray-700 mb-6 font-semibold">
+                  Shih Tzus, like any other breed, may be prone to certain health concerns. Let's see what they are:
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 bg-lime-200 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-2">Hip and elbow dysplasia</h3>
+                  <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold mb-2">Luxating Patella</h3>
                     <p className="text-sm text-gray-600">
-                      This affects the development of the hip and elbow joints and can cause pain and mobility issues.
+                      This condition involves the dislocation of the 
+                      kneecap and can be seen in Shih Tzus, causing lameness and discomfort.
                     </p>
                   </div>
-                  <div className="p-4 bg-lime-200 rounded-lg shadow-sm">
-                    <h3 className="text-xl font-semibold mb-2">Heart disease</h3>
+                  <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold mb-2">Obesity</h3>
                     <p className="text-sm text-gray-600">
-                      This can result in symptoms like coughing and breathing difficulties.
+                      Shih Tzus are prone to weight gain, so it's important to monitor their diet and exercise to prevent obesity.
                     </p>
                   </div>
-                  <div className="p-4 bg-lime-200 rounded-lg shadow-sm col-span-1 md:col-span-2">
+                  <div className="p-4 bg-orange-100 rounded-lg shadow-sm">
+                    <h3 className="text-xl font-semibold mb-2">Dental issues</h3>
+                    <p className="text-sm text-gray-600">
+                      Shih Tzus are susceptible to dental problems like tartar buildup and periodontal disease, emphasizing the need for regular dental care.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-orange-100 rounded-lg shadow-sm col-span-1 md:col-span-2">
                     <h3 className="text-xl font-semibold mb-2">Allergies</h3>
                     <p className="text-sm text-gray-600">
-                      Allergies can cause itching and hot spots.
+                      Shih Tzus may experience allergies, including food allergies or environmental sensitivities.
                     </p>
                   </div>
                 </div>
@@ -441,7 +454,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
                 />
               </div>
             </div>
-            <div className="mt-8 bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center justify-between">
+            <div className="mt-8 bg-orange-100 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center justify-between">
               <div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Does your Retriever have a health issue?</h3>
                 <p className="text-gray-600">
@@ -458,7 +471,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
         {/* Training Section */}
         <div ref={trainingRef}>
           <section className="mb-12 bg-gray-100 p-8 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Golden Retriever Training</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Shih Tzu Training</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="md:order-last">
                 <img src={training1} 
@@ -469,15 +482,17 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
                 />
               </div>
               <div>
-                <p className="text-lg text-gray-700 mb-6">
-                  Golden Retrievers are intelligent and active dogs that require plenty of mental and physical
-                  stimulation to stay healthy and happy. Here are some ways you can ensure they stay stimulated.
+                <p className="text-xl text-gray-700 mb-6 ">
+                  Shih Tzus shine during training sessions, as their intelligence and eagerness to please 
+                  make them quick learners. Let's explore a few ways to keep your Shih Tzu fit and active.
+
+
                 </p>
                 <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Lots of physical exercise</h3>
-                  <p className="text-gray-600">
-                    Retrievers are known for their high energy levels, so it's crucial to provide them with enough
-                    opportunities for physical exercises such as walks, runs, hikes and playtime with toys.
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Physical training and exercises</h3>
+                  <p className="text-gray-600 text-xl mb-4">
+                    Shih Tzus thrive with regular physical exercise. Take them for brisk walks, 
+                    engage in play sessions, or play interactive games to keep them active and happy.
                   </p>
      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -504,11 +519,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
                   
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-blue-800 mb-2">2. Engage in interactive play</h3>
-                  <p className="text-gray-600">
-                    Retrievers require regular mental and physical stimulation. Activities such as obedience and agility
-                    training, interactive toys, puzzle toys can keep them mentally stimulated. Chew toys, plush toys, and
-                    scent-based toys can also be used to keep them engaged and happy.
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-4">2. Interactive Play</h3>
+                  <p className="text-gray-600 text-xl mb-4">
+                    Shih Tzus enjoy interactive play that satisfies their curiosity. 
+                    Keep them mentally stimulated with interactive toys, engaging puzzles, and fun training exercises.
                   </p>
     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
   {[
@@ -540,7 +554,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
               <div className="md:w-2/3">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Train And Teach New Tricks</h3>
                 <p className="text-gray-600">
-                  Retrievers learn tricks easily and enjoy training which can be enhanced by using training treats for positive reinforcement and motivation.
+                  Shih Tzus excel in training with treats, enhancing their obedience for basic 
+                  commands like 'sit,' 'stay,' 'come,' 'heel,' and 'down’.
                 </p>
                 <div className="mt-4 flex space-x-4">
                   <img src={training2} alt="Training treats" className="h-20 w-auto" loading='lazy'/>
@@ -559,12 +574,13 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 <div ref={groomingRef}>
   <section className="mb-12 bg-pink-100 p-8 rounded-lg shadow-md">
     <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">
-      Golden Retriever Grooming
+      Shih Tzus Grooming
     </h2>
     <div className="flex flex-col lg:flex-row items-center gap-8">
       <div className="lg:w-1/2 flex-shrink-0">
         <p className="text-lg text-gray-700 mb-6">
-          Golden Retrievers have thick, double coats that require regular grooming. Here are some tips for taking better care of their skin and coat.
+          Regular grooming is essential for Shih Tzus for their long and luxurious coats. 
+          Let's delve into the key aspects of grooming a Shih Tzu.
         </p>
       </div>
       <div className="lg:w-1/2">
@@ -588,8 +604,9 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <div className="lg:w-1/2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">1. Brush and bath</h3>
       <p className="text-gray-600 leading-relaxed">
-        Regularly brush and bathe golden retrievers as they have a thick water-repellent coat.
-        Use mild shampoo to maintain coat turnover, help distribute oils, and reduce shedding.
+        Brush your Shih Tzu’s coat weekly to maintain its shine and health and reduce shedding. 
+        Occasional baths using mild shampoo will keep them clean and fresh.
+
       </p>
     </div>
     {/* Images */}
@@ -648,8 +665,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <div className="lg:w-1/2 order-2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">2. Keep their ear clean</h3>
       <p className="text-gray-600 leading-relaxed">
-        Use a veterinarian-approved ear cleaning solution to gently clean the inside of your
-        golden retriever's ears, being careful not to insert the cleaner too far.
+        Check and clean ears regularly with a 
+        mild ear-cleaning solution and a cotton ball to promote ear health.
       </p>
     </div>
   </div>
@@ -660,9 +677,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <div className="lg:w-1/2">
       <h3 className="text-2xl font-semibold text-pink-800 mb-4">3. Keep their paws and nails clean</h3>
       <p className="text-gray-600 leading-relaxed">
-        Regularly check your golden retriever’s paws for dirt, debris, or small cuts,
-        and gently wipe them with a pet-safe wipe or damp cloth. Trim their nails every few weeks
-        to prevent overgrowth, which can cause discomfort or affect their walking.
+        Trim their nails regularly to prevent discomfort 
+        and ensure their paw pads are clean and free from any issues.
       </p>
     </div>
     {/* Images */}
@@ -690,6 +706,44 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     </div>
   </div>
 
+{/* 4. Dental care */}
+  <div className="mb-10 flex flex-col lg:flex-row items-center gap-10">
+    {/* Images */}
+    <div className="lg:w-1/2 flex flex-wrap gap-6 justify-center lg:justify-start order-1">
+      {[
+        { img: dental, label: "Dental care Products", link: "#" }
+      ].map((item, idx) => (
+        <a
+          key={idx}
+          href={item.link}
+          className="relative bg-white rounded-xl shadow-md p-4 w-48 text-center flex flex-col items-center group hover:shadow-lg transition"
+        >
+          <img
+            src={item.img}
+            alt={item.label}
+            className="h-40 w-auto mb-3 object-contain transform transition-transform duration-300 group-hover:scale-105"
+            loading='lazy'
+          />
+          <p className="text-base font-medium">{item.label}</p>
+          <span className="absolute bottom-3 right-3 inline-flex items-center justify-center w-8 h-8 bg-orange-500 text-white text-lg font-bold rounded-full shadow-md transform transition-all duration-300 group-hover:translate-x-1 group-hover:bg-orange-600">
+
+            →
+          </span>
+        </a>
+      ))}
+    </div>
+    {/* Content */}
+    <div className="lg:w-1/2 order-2">
+      <h3 className="text-2xl font-semibold text-pink-800 mb-4">4. Dental Care</h3>
+      <p className="text-gray-600 leading-relaxed">
+        Maintain oral hygiene by brushing their teeth at least twice a week with dog-specific 
+        toothpaste and a toothbrush to prevent plaque and tartar buildup.
+      </p>
+    </div>
+  </div>
+
+  
+
 </section>
 
 
@@ -707,6 +761,30 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
             </div>
           </div>
         </section>
+
+        <section className="relative bg-blue-200 rounded-lg">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+    {/* Image Section */}
+    <div className="md:w-1/2 w-full">
+      <img
+        src={training3} // replace with your image path
+        alt="German Shepherd"
+        className="w-full h-full object-cover"
+        loading='lazy'
+      />
+    </div>
+
+    {/* Text Section */}
+    <div className="md:w-1/2 w-full p-8 flex items-center justify-center">
+      <p className="text-black text-xl md:text-2xl font-semibold leading-relaxed text-center md:text-left">
+        Early Exposure to people, animals, and environments is crucial for Shih Tzus to
+        promote their social skills, 
+        prevents shyness or aggression, and cultivates them into adaptable and sociable companions.
+      </p>
+    </div>
+  </div>
+</section>
+
 
         {/* FAQ Section */}
         <section className="py-12">
@@ -755,4 +833,4 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   );
 };
 
-export default GoldenRetrieverPage;
+export default LabradorPage;

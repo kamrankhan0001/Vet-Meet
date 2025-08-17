@@ -44,6 +44,10 @@ import DashboardPage from "./pages/DashboardPage";
 import GoldenRetriever from "./pages/meetByBreed/GoldenRetriever";
 import GermanShepherd from "./pages/meetByBreed/GermanShepherd";
 import Labrador from "./pages/meetByBreed/Labrador";
+import Beagle from "./pages/meetByBreed/Beagle";
+import Shih from "./pages/meetByBreed/Shih";
+import Boxer from "./pages/meetByBreed/Boxer";
+
 import './firebase';
 import Rottweiler from "./pages/meetByBreed/Rottweiler";
 
@@ -125,6 +129,9 @@ const App = () => {
         <Route path="/breed/german-shepherd" element={<GermanShepherd />} />
         <Route path="/breed/labrador" element={<Labrador />} />
         <Route path="/breed/rottweiler" element={<Rottweiler />} />
+        <Route path="/breed/beagle" element={<Beagle />} />
+        <Route path="/breed/shih-tzu" element={<Shih />} />
+        <Route path="/breed/boxer" element={<Boxer />} />
         
         
 
