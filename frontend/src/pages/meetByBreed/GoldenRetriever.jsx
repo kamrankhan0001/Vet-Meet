@@ -11,6 +11,7 @@ import brush from '../../assets/Categories/brush.png';
 import shampoo from '../../assets/Categories/shampoo.png';
 import training1 from '../../assets/Categories/training1.png';
 import training2 from '../../assets/Categories/training2.png';
+import training3 from '../../assets/Categories/training3.png';
 import health from '../../assets/Categories/health.png';
 import chickenfood from '../../assets/Categories/chickenfood.png';
 import fishfood from '../../assets/Categories/fishfood.png';
@@ -27,7 +28,7 @@ import interactive from '../../assets/Categories/interactive.png';
 import puzzle from '../../assets/Categories/puzzle.png';
 import chew from '../../assets/Categories/chew.png';
 import ear from '../../assets/Categories/ear.png';
-
+import dental from '../../assets/Categories/dental.png';
 
 const GoldenRetrieverPage = ({ onBackClick }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
@@ -54,7 +55,16 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     {
       question: 'Do Golden Retrievers get along with other pets?',
       answer: 'Yes, Golden Retrievers are typically very social and get along well with other dogs and pets, especially when properly socialized from a young age.'
-    }
+    },
+   {
+    question: 'Do Golden Retrievers require regular grooming?',
+    answer: 'Yes, Golden Retrievers require regular grooming due to their thick double coat. Brushing several times a week helps prevent matting and reduces shedding. Regular baths and trimming also help keep their coat healthy and clean.'
+  },
+  
+  {
+    question: 'How much does it cost to raise a Golden Retriever?',
+    answer: 'The cost to raise a Golden Retriever can range from $1,500 to $3,000 per year, covering food, grooming, vet care, and other essentials. Initial costs such as vaccinations, training, and supplies can add to this amount.'
+  }
   ];
 
   // Function to handle smooth scrolling to a section
@@ -247,7 +257,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     <h2 className="text-xl font-bold text-gray-900 mb-1 underline decoration-red-500 decoration-2">
       Golden Retriever Diet
     </h2>
-    <p className="text-gray-700">
+    <p className="text-gray-700 text-lg">
       Consider following tips when choosing food for your golden retriever.
     </p>
   </div>
@@ -260,7 +270,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     loading='lazy'
     
     />
-    <p className="text-sm font-medium text-center mt-2">Chicken based food</p>
+    
   </div>
 </div>
 
@@ -270,10 +280,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2">
+    <h3 className="font-bold text-gray-900 mb-2 text-lg">
       1. Choose a protein-rich diet
     </h3>
-    <p className="text-gray-700 mb-4">
+    <p className="text-gray-700 mb-4 text-lg">
       Since Golden Retrievers are medium to large in size, they require a diet that is 
       <span className="italic"> high in protein </span>
       to support their muscle mass and energy needs. Look for 
@@ -315,8 +325,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 
     {/* Tip 2 */}
     <div className="mb-8">
-      <h3 className="font-bold text-gray-900 mb-2">2. Avoid fillers & additives</h3>
-      <p className="text-gray-700 mb-4">
+      <h3 className="font-bold text-gray-900 mb-2 text-lg">2. Avoid fillers & additives</h3>
+      <p className="text-gray-700 mb-4 text-lg">
         Most commercial dog food contains fillers like corn, wheat, and soy which can be difficult
         for them to digest and may cause allergies. Choose dog food that is made with whole, natural
         ingredients and free from unnecessary additives.
@@ -354,8 +364,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
   
   {/* Text Section */}
   <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2">3. Consider their age</h3>
-    <p className="text-gray-700 mb-4">
+    <h3 className="font-bold text-gray-900 mb-2 text-lg">3. Consider their age</h3>
+    <p className="text-gray-700 mb-4 text-lg">
       The nutritional needs of puppies are different from those of adult dogs. 
       A puppy’s diet should be higher in protein and calories to support their rapid 
       growth and development. Diet for an adult dog should be formulated to meet 
@@ -407,25 +417,25 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
             <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b-2 border-gray-400 pb-2">Golden Retriever Common Health Concerns</h2>
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="lg:w-1/2 flex flex-col justify-between">
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-xl text-gray-700 mb-6">
                   Generally, Golden Retrievers are healthy dogs, but like all breeds, they too are prone to certain health issues. Scroll to know what they are.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="p-4 bg-lime-200 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold mb-2">Hip and elbow dysplasia</h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-lg text-gray-600">
                       This affects the development of the hip and elbow joints and can cause pain and mobility issues.
                     </p>
                   </div>
                   <div className="p-4 bg-lime-200 rounded-lg shadow-sm">
                     <h3 className="text-xl font-semibold mb-2">Heart disease</h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-lg text-gray-600">
                       This can result in symptoms like coughing and breathing difficulties.
                     </p>
                   </div>
                   <div className="p-4 bg-lime-200 rounded-lg shadow-sm col-span-1 md:col-span-2">
                     <h3 className="text-xl font-semibold mb-2">Allergies</h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-lg text-gray-600">
                       Allergies can cause itching and hot spots.
                     </p>
                   </div>
@@ -475,7 +485,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
                 </p>
                 <div className="mb-6">
                   <h3 className="text-2xl font-semibold text-blue-800 mb-2">1. Lots of physical exercise</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-lg mb-4">
                     Retrievers are known for their high energy levels, so it's crucial to provide them with enough
                     opportunities for physical exercises such as walks, runs, hikes and playtime with toys.
                   </p>
@@ -502,10 +512,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 </div>
 
                   
-                </div>
+</div>
                 <div>
                   <h3 className="text-2xl font-semibold text-blue-800 mb-2">2. Engage in interactive play</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-lg mb-4">
                     Retrievers require regular mental and physical stimulation. Activities such as obedience and agility
                     training, interactive toys, puzzle toys can keep them mentally stimulated. Chew toys, plush toys, and
                     scent-based toys can also be used to keep them engaged and happy.
@@ -690,6 +700,44 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
     </div>
   </div>
 
+
+  {/* 2. Keep their ear clean */}
+  <div className="mb-10 flex flex-col lg:flex-row items-center gap-10">
+    {/* Images */}
+    <div className="lg:w-1/2 flex flex-wrap gap-6 justify-center lg:justify-start order-1">
+      {[
+        { img: dental, label: "Dental care products", link: "#" }
+      ].map((item, idx) => (
+        <a
+          key={idx}
+          href={item.link}
+          className="relative bg-white rounded-xl shadow-md p-4 w-48 text-center flex flex-col items-center group hover:shadow-lg transition"
+        >
+          <img
+            src={item.img}
+            alt={item.label}
+            className="h-40 w-auto mb-3 object-contain transform transition-transform duration-300 group-hover:scale-105"
+            loading='lazy'
+          />
+          <p className="text-base font-medium">{item.label}</p>
+          <span className="absolute bottom-3 right-3 inline-flex items-center justify-center w-8 h-8 bg-orange-500 text-white text-lg font-bold rounded-full shadow-md transform transition-all duration-300 group-hover:translate-x-1 group-hover:bg-orange-600">
+
+            →
+          </span>
+        </a>
+      ))}
+    </div>
+    {/* Content */}
+    <div className="lg:w-1/2 order-2">
+      <h3 className="text-2xl font-semibold text-pink-800 mb-4">4. Dental Care  </h3>
+      <p className="text-gray-600 leading-relaxed">
+        Golden Retrievers are prone to dental problems, so it's important to brush their teeth regularly 
+        to remove plaque and prevent tartar buildup.
+      </p>
+    </div>
+  </div>
+
+
 </section>
 
 
@@ -708,9 +756,33 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
           </div>
         </section>
 
+        <section className="relative bg-blue-200 rounded-lg">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+            {/* Image Section */}
+            <div className="md:w-1/2 w-full">
+              <img
+                src={training3} // replace with your image path
+                alt="Golden Retriever swimming"
+                className="w-full h-full object-cover"
+                loading='lazy'
+              />
+            </div>
+        
+            {/* Text Section */}
+            <div className="md:w-1/2 w-full p-8 flex items-center justify-center">
+              <p className="text-black text-xl md:text-2xl font-semibold leading-relaxed text-center md:text-left">
+                Most Goldens love to swim, and it's excellent exercise for them, even when young. 
+                Introduce them to water and let them explore on their own. 
+                If they are unsure about the water, you might get in and swim out a bit to encourage them
+                
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
-        <section className="py-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
+        <section className="py-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4 min-w-3xl mx-auto">
@@ -741,15 +813,6 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
           </div>
         </section>
 
-        {/* Back Button */}
-        <div className="flex justify-center mt-12">
-          <button
-            onClick={onBackClick}
-            className="bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-700 transition duration-300"
-          >
-            Back to All Breeds
-          </button>
-        </div>
       </div>
     </div>
   );

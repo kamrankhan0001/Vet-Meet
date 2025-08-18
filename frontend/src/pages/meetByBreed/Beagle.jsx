@@ -747,7 +747,7 @@ const BeaglePage = ({ onBackClick }) => {
 
 
         {/* FAQ Section */}
-        <section className="py-12">
+        <section className="py-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
             Frequently Asked Questions
           </h2>
@@ -779,15 +779,7 @@ const BeaglePage = ({ onBackClick }) => {
           </div>
         </section>
 
-        {/* Back Button */}
-        <div className="flex justify-center mt-12">
-          <button
-            onClick={onBackClick}
-            className="bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-700 transition duration-300"
-          >
-            Back to All Breeds
-          </button>
-        </div>
+        
       </div>
     </div>
   );

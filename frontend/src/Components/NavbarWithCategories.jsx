@@ -407,7 +407,7 @@ export default function NavbarWithCategories() {
                 </div>
               </div>
             ) : cat.name === "Meet And Breed" ? (
-  <div className="fixed top-[130px] left-0 w-full bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-hidden rounded-none px-8 py-6">
+  <div className="fixed top-[80px] left-0 w-full bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-hidden rounded-none px-8 py-4">
    
     <div className="max-w-[1400px] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6">
       {cat.subCategories.shopFor.map((item, subIndex) => (
