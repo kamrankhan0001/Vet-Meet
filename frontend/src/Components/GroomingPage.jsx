@@ -26,41 +26,6 @@ import andis from "../assets/Grooming/andis.png";
 import hydra from "../assets/Grooming/hydra.png";
 import wildwash from "../assets/Grooming/wildwash.png";
 
-
-
-const categories = [
-  {
-    name: "Shampoo & conditioner",
-    discount: "Up to 36% Off",
-    image: "https://via.placeholder.com/100x120.png?text=Shampoo"
-  },
-  {
-    name: "Skin & coat care",
-    discount: "Up to 15% Off",
-    image: "https://via.placeholder.com/100x120.png?text=Skin+Care"
-  },
-  {
-    name: "Perfumes & cologne",
-    discount: "Up to 20% Off",
-    image: "https://via.placeholder.com/100x120.png?text=Perfume"
-  },
-  {
-    name: "Grooming Tools",
-    discount: "Up to 60% Off",
-    image: "https://via.placeholder.com/100x120.png?text=Grooming"
-  },
-  {
-    name: "Towels & Wipes",
-    discount: "Up to 60% Off",
-    image: "https://via.placeholder.com/100x120.png?text=Towels"
-  },
-  {
-    name: "Ear & eye care",
-    discount: "Up to 20% Off",
-    image: "https://via.placeholder.com/100x120.png?text=Ear+Care"
-  },
-];
-
 const products = [
   { brand: "Barkbutler", name: "Raincoat", img: raincoat },
   { brand: "Truelove", name: "Waterproof Boots", img: boot },
