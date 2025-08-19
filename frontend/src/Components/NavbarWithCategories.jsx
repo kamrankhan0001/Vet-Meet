@@ -127,7 +127,7 @@ const categories = [
       { name: "Online Chat", path: "/consult-a-vet?action=chat" }
     ]
   },
-  { name: "Grooming", subCategories: ["Discounted Items", "Bundles"] },
+  { name: "Grooming", path:"/grooming",  subCategories: ["Discounted Items", "Bundles"] },
   {
     name: "Meet And Breed",
     // MODIFIED: Restructured subCategories for Shop By Breed to match the image-based layout
@@ -238,6 +238,11 @@ export default function NavbarWithCategories() {
     } else if (categoryName === "Day Care") {
       navigate("/clinic");
     }
+    else if (categoryName === "Grooming") {
+      navigate("/grooming");
+    } 
+
+
     if (drawerOpen) {
       setDrawerOpen(false);
     }

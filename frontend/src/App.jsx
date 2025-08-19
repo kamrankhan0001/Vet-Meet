@@ -47,6 +47,8 @@ import Labrador from "./pages/meetByBreed/Labrador";
 import Beagle from "./pages/meetByBreed/Beagle";
 import Shih from "./pages/meetByBreed/Shih";
 import Boxer from "./pages/meetByBreed/Boxer";
+import GroomingPage from "./Components/GroomingPage";
+
 
 import './firebase';
 import Rottweiler from "./pages/meetByBreed/Rottweiler";
@@ -102,6 +104,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/my-orders" element={<MyOrderPage />} />
+        <Route path="/grooming" element={<GroomingPage />} />
         
         <Route
           path="/health-tips/:title"
