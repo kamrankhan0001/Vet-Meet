@@ -42,6 +42,7 @@ import himalaya from "../assets/grooming/himalaya.png";
 import basil from "../assets/grooming/basil.png";
 import wahl from "../assets/grooming/wahl.png";
 import barkOutLoud from "../assets/grooming/barkOutLoud.png";
+import vedio from "../assets/grooming/vedio.mp4";
 
 
 
@@ -391,7 +392,21 @@ const GroomingPage = () => {
 
 
 
+<section className="w-full py-5 px-4 flex flex-col items-center">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+        Watch Our Video
+      </h2>
 
+      {/* Local/Uploaded Video */}
+      <video
+        className="w-full rounded-2xl shadow-lg"
+        controls
+        poster="https://via.placeholder.com/800x400.png?text=Video+Thumbnail"
+      >
+        <source src={vedio} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
 
 
       </div>
