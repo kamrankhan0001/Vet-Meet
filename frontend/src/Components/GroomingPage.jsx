@@ -25,6 +25,27 @@ import christensen from "../assets/Grooming/christensen.png";
 import andis from "../assets/Grooming/andis.png";
 import hydra from "../assets/Grooming/hydra.png";
 import wildwash from "../assets/Grooming/wildwash.png";
+import bannerDogCat from "../assets/Grooming/bannerDogCat.png";
+import furlicks from "../assets/Grooming/furlicks.png";
+import cleaner from "../assets/Grooming/cleaner.png";
+import mybeau from "../assets/Grooming/myBeau.png";
+import erina from "../assets/Grooming/erina.png";
+import dryShampoo from "../assets/Grooming/dryShampoo.png";
+import pawNailCare from "../assets/Grooming/pawNailCare.png";
+import tickFlea from "../assets/Grooming/antiTickFlea.png";
+import comb from "../assets/Grooming/comb.png";
+import fragrance from "../assets/Grooming/fragrance.png";
+import wipes from "../assets/Grooming/wipes.png";
+import forbis from "../assets/Grooming/forbis.png";
+import remedies from "../assets/Grooming/remedies.png";
+import himalaya from "../assets/Grooming/himalaya.png";
+import basil from "../assets/Grooming/basil.png";
+import wahl from "../assets/Grooming/wahl.png";
+import barkOutLoud from "../assets/Grooming/barkOutLoud.png";
+
+
+
+
 
 const products = [
   { brand: "Barkbutler", name: "Raincoat", img: raincoat },
@@ -42,6 +63,13 @@ const products = [
 
 ];
 
+const wellnessProducts = [
+  { discount: "Up to 20% off", name: "Hair Supplements", img: mybeau },
+  { discount: "Up to 60% off", name: "Cleaning Solution", img: cleaner },
+  { discount: "Up to 35% off", name: "Ticks & Fleas Control", img: erina },
+  { discount: "Up to 27% off", name: "Oral Care", img: furlicks },
+];
+
 const premiumProducts = [
   {  img: bioGroom, offer: "Up to 10% off" },
   {  img: earthbath, offer: "Up to 18% off" },
@@ -49,6 +77,26 @@ const premiumProducts = [
   {  img: andis, offer: "Up to 25% off" },
   {  img: hydra, offer: "Up to 5% off" },
   {  img: wildwash, offer: "Best prices" },
+];
+
+const monsoonProducts = [
+  { discount: "Up to 35% Off", name: "Dry Shampoo", img: dryShampoo },
+  { discount: "Up to 60% Off", name: "Paw Nail care", img: pawNailCare },
+  { discount: "Up to 15% Off", name: "Anti tick-flea", img: tickFlea },
+  { discount: "Up to 20% Off", name: "Combs", img: comb },
+  { discount: "Up to 20% Off", name: "Fragrances", img: fragrance },
+  { discount: "Up to 60% Off", name: "Towels & Wipes", img: wipes },
+
+];
+
+const topBrands = [
+  { discount: "Up to 15% Off", name: "Forbis", img: forbis },
+  { discount: "Up to 20% Off", name: "Natural Remedies", img: remedies },
+   { discount: "Up to 15% Off", name: "Himalaya", img: himalaya },
+  { discount: "Up to 15% Off", name: "Basil", img: basil },
+  { discount: "Up to 20% Off", name: "Wahl", img: wahl },
+   { discount: "Up to 15% Off", name: "Bark Out Loud", img: barkOutLoud },
+
 ];
 
 
@@ -84,8 +132,76 @@ const GroomingPage = () => {
         </div>
       </div>
 
+
+      <div className="w-full bg-white py-8">
+      
+      {/* Scrollable Row */}
+      <div className="flex space-x-4 overflow-x-auto scrollbar-hide px-0">
+        {/* Left Banner Card */}
+        <div className="flex-shrink-0 w-48 h-56 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-300 flex flex-col items-center justify-center text-white font-bold text-xl shadow-lg relative">
+          <span className="text-yellow-300 text-3xl">MONSOON</span>
+          <span className="text-xl">CARE</span>
+          <button className="absolute bottom-3 right-3 bg-white text-black rounded-full p-2 shadow">
+            ➤
+          </button>
+        </div>
+
+        {/* Product Cards */}
+        {monsoonProducts.map((item, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 w-52 h-58 bg-gradient-to-br from-sky-200 to-white rounded-2xl shadow-md hover:shadow-lg p-4 flex flex-col items-center justify-between transition-transform hover:-translate-y-1"
+          >
+            <div className="text-center">
+              <p className="text-lg font-bold text-gray-900">{item.discount}</p>
+              <p className="text-md font-medium text-gray-700">{item.name}</p>
+            </div>
+            <img
+              src={item.img}
+              alt={item.name}
+              className="w-36 h-40 object-contain"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+<div className="w-full bg-white py-8 ">
+      
+      {/* Scrollable Row */}
+      <div className="flex space-x-4 overflow-x-auto scrollbar-hide px-0">
+        {/* Left Banner Card */}
+        <div className="flex-shrink-0 w-48 h-56 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-300 flex flex-col items-center justify-center text-white font-bold text-xl shadow-lg relative">
+          <span className="text-yellow-300 text-3xl">TOP 6</span>
+          <span className="text-xl">BRANDS</span>
+          <button className="absolute bottom-3 right-3 bg-white text-black rounded-full p-2 shadow">
+            ➤
+          </button>
+        </div>
+
+        {/* Product Cards */}
+        {topBrands.map((item, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 w-52 h-58 bg-gradient-to-br from-sky-200 to-white rounded-2xl shadow-md hover:shadow-lg p-4 flex flex-col items-center justify-between transition-transform hover:-translate-y-1"
+          >
+            <div className="text-center">
+              <p className="text-lg font-bold text-gray-900">{item.discount}</p>
+              <p className="text-md font-medium text-gray-700">{item.name}</p>
+            </div>
+            <img
+              src={item.img}
+              alt={item.name}
+              className="w-36 h-40 object-contain"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+
+
       {/* SECTION 3: Product Categories */}
-<div className="relative z-10 w-full bg-gradient-to-b from-white to-gray-50 py-14 px-4 sm:px-6 md:px-12 -mt-24 md:-mt-12 lg:-mt-24">
+<div className="relative z-10 w-full bg-gradient-to-b from-white to-gray-50 py-14 px-4 sm:px-6 md:px-12">
   <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-10">
     Shop by <span className="text-orange-500">Categories</span>
   </h2>
@@ -132,7 +248,7 @@ const GroomingPage = () => {
 </div>
 
 
-<section className="relative w-full bg-gradient-to-b from-sky-100 to-sky-50 py-12 px-4 sm:px-6 md:px-12 overflow-hidden">
+<section className="relative w-full bg-gradient-to-b from-sky-300 to-sky-50 py-12 px-4 sm:px-6 md:px-12 overflow-hidden">
       {/* Rain background effect */}
       <div className="absolute inset-0 bg-[url('/rain-pattern.svg')] bg-repeat opacity-20 pointer-events-none"></div>
 
@@ -205,6 +321,81 @@ const GroomingPage = () => {
       </div>
     </div>
 
+
+<div className="w-full bg-white">
+      {/* Banner */}
+      <div className="relative w-full bg-sky-400 rounded-b-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-10">
+        {/* Text */}
+        <div className="text-white max-w-xl">
+          <h2 className="text-3xl md:text-6xl font-bold leading-snug drop-shadow">
+            Healthy, Happy, <br /> Monsoon Ready
+          </h2>
+          <p className="mt-3 text-white font-medium flex items-center">
+            co-powered by{" "}
+            <span className="ml-2 bg-white text-orange-600 font-bold px-2 py-1 rounded">
+              VIVALDIS
+            </span>
+          </p>
+        </div>
+
+        {/* Dog + Cat Image */}
+        <div className="mt-6 md:mt-0">
+          <img
+            src={bannerDogCat}
+            alt="Dog and Cat"
+            className="w-60 md:w-84 drop-shadow-lg"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* Wellness Corner */}
+      <div className="py-10 px-4 sm:px-6 md:px-12">
+        <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-8">
+          Woof Or Wellness Corner
+        </h3>
+
+        {/* Wrapper for Horizontal Scroll on Mobile */}
+<div className="overflow-x-auto scrollbar-hide">
+  <div className="flex md:grid md:grid-cols-4 gap-4 p-2">
+    {wellnessProducts.map((item, i) => (
+      <div
+        key={i}
+        className="min-w-[270px] md:min-w-0 bg-gradient-to-r from-sky-200 to-sky-100 
+                   rounded-md shadow-md hover:shadow-lg p-4 flex items-center justify-between 
+                   transition-transform hover:-translate-y-1"
+      >
+        {/* Left Side - Text */}
+        <div className="flex-1">
+          <p className="text-lg md:text-xl font-bold text-green-800 leading-snug">
+            {item.discount}
+          </p>
+          <p className="text-sm md:text-base font-medium text-gray-700 mt-1">
+            {item.name}
+          </p>
+        </div>
+
+        {/* Right Side - Product Image */}
+        <div className="flex-shrink-0 ml-3">
+          <img
+            src={item.img}
+            alt={item.name}
+            className="w-16 h-20 md:w-20 md:h-24 object-contain"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+
+
+
+      </div>
+    </div>
       
     </div>
   );
