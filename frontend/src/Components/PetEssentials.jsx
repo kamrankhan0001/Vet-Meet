@@ -48,7 +48,7 @@ import flushable from '../assets/PetEssentials/flushable.png';
 import scooper from '../assets/PetEssentials/scooper.png';
 import litterBoxes from '../assets/PetEssentials/litterBoxes.png';
 import cleanser from '../assets/PetEssentials/cleanser.png';
-import stainRemover from '../assets/PetEssentials/stainRemover.png';
+import stainRemover from '../assets/PetEssentials/stainremover.png';
 import litterTray from '../assets/PetEssentials/litterTray.png';
 import fountain from '../assets/PetEssentials/fountain.png';
 import dispenser from '../assets/PetEssentials/dispenser.png';
