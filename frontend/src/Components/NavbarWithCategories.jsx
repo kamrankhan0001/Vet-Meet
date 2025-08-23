@@ -56,6 +56,8 @@ import breed4 from '../assets/Categories/breed4.png';
 import breed5 from '../assets/Categories/breed5.png';
 import breed6 from '../assets/Categories/breed6.png';
 import breed7 from '../assets/Categories/breed7.png';
+import orijen from '../assets/Categories/orijen.png';
+import schesir from '../assets/Categories/schesir.png';
 
 const categories = [
   {
@@ -83,6 +85,7 @@ const categories = [
         { logo: catBrand4, discount: "EXTRA 6% OFF" },
         { logo: catBrand5, discount: "UP TO 10% OFF" },
         { logo: catBrand6, discount: "UP TO 20% OFF" },
+        { logo: schesir, discount: "UP TO 15% OFF" },
 
       ]
     },
@@ -116,6 +119,8 @@ const categories = [
         { logo: dogBrand6, discount: "Extra ₹500* Off" },
         { logo: dogBrand7, discount: "BACK IN STOCK" },
         { logo: dogBrand8, discount: "UP TO 20% OFF" },
+        { logo: catBrand5, discount: "UP TO 10% OFF" },
+        { logo: orijen, discount: "UP TO 10% OFF" },
       ]
     },
   },
@@ -130,7 +135,7 @@ const categories = [
   },
   { name: "Grooming", path:"/grooming",  subCategories: ["Discounted Items", "Bundles"] },
   {
-    name: "Meet And Breed",
+    name: "Meet And Breed", 
     // MODIFIED: Restructured subCategories for Shop By Breed to match the image-based layout
     subCategories: {
       shopFor: [
@@ -144,9 +149,13 @@ const categories = [
       ],
     },
   },
-  {name: "Pet Essentials" , subCategories: ["", ""]},
+  {name: "Pet Essentials" , path: "/pet-essentials",
+    subCategories: 
+    ["",
+      
+      ""]},
   {
-    name: "Pharmacy",
+    name: "Pharmacy", path: "/pharmacy",
     // MODIFIED: Restructured subCategories for Pharmacy to match the image-based layout
     subCategories: {
       shopFor: [
@@ -242,7 +251,9 @@ export default function NavbarWithCategories() {
     else if (categoryName === "Grooming") {
       navigate("/grooming");
     } 
-
+    else if (categoryName === "Pet Essentials") {
+      navigate("/pet-essentials");
+    }
 
     if (drawerOpen) {
       setDrawerOpen(false);
@@ -368,9 +379,9 @@ export default function NavbarWithCategories() {
           
             {["Cats", "Dogs"].includes(cat.name) ? (
               <div className="absolute left-0 top-10 w-[1150px] h-[500px] bg-white border-t border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-y-auto rounded-lg p-2 scrollbar-hide">
-                <div className="mb-3">
-                  <h3 className="text-lg font-bold mb-4 text-gray-800">Shop For</h3>
-                  <div className="grid grid-cols-7 gap-0">
+                <div className="mb-1">
+                  <h3 className="text-md font-bold mb-4 text-gray-800">Shop For</h3>
+                  <div className="grid grid-cols-8 gap-0">
                     {cat.subCategories.shopFor.map((item, subIndex) => (
                       <div
                         key={subIndex}
@@ -385,9 +396,9 @@ export default function NavbarWithCategories() {
                 </div>
 
                 <div>
-                  <h3 className="text-md font-semibold mb-2 text-gray-800">Top Brands</h3>
+                  <h3 className="text-md font-semibold mb-1 text-gray-800">Top Brands</h3>
                   <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-1 pb-1 scrollbar-hide">
-                    <div className="flex space-x-2 md:space-x-6 mx-2">
+                    <div className="flex space-x-2 md:space-x-3 mx-2">
                       {cat.subCategories.topBrands.map((brand, subIndex) => (
                         <div
                           key={subIndex}
@@ -402,7 +413,7 @@ export default function NavbarWithCategories() {
                           />
                           <span className="block text-sm font-medium text-gray-700">{brand.name}</span>
                           {brand.discount && (
-                            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs px-2 py-0 rounded-full whitespace-nowrap">
+                            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-0 rounded-full whitespace-nowrap">
                               {brand.discount}
                             </span>
                           )}
@@ -456,99 +467,117 @@ export default function NavbarWithCategories() {
 </nav>
 
       {/* CATEGORY DRAWER - MOBILE */}
-      <div
-        className={`fixed inset-0 z-50 transform ${
-          drawerOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out bg-amber-500 bg-opacity-40 md:hidden`}
-        onClick={toggleDrawer}
-      >
-        <div
-          className="bg-white w-72 h-full p-6 overflow-y-auto"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <h2 className="text-xl font-semibold mb-4">Categories</h2>
-          <nav>
-            {categories.map((cat, index) => (
-              <div key={index} className="mb-4">
-                {cat.path ? ( // If the main category has a direct path, it should navigate immediately
-                  <button
-                    onClick={() => {
-                      navigate(cat.path);
-                      setDrawerOpen(false); // Close drawer on navigation
-                    }}
-                    className="flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-blue-600"
-                  >
-                    {cat.name}
-                  </button>
-                ) : ( // Otherwise, it's an expandable category (for Cats, Dogs, Pharmacy, Henlo, Shop By Breed, Summer Sale)
-                  <button
-                    onClick={() => toggleCategory(index)}
-                    className="flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-blue-600"
-                  >
-                    {cat.name}
-                    <svg
-                      className={`w-5 h-5 transition-transform ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      viewBox="0 0 24 24"
+<div
+  className={`fixed inset-0 z-50 transform ${
+    drawerOpen ? "translate-x-0" : "-translate-x-full"
+  } transition-transform duration-300 ease-in-out bg-amber-500 bg-opacity-40 md:hidden`}
+  onClick={toggleDrawer}
+>
+  <div
+    className="bg-white w-72 h-full p-6 overflow-y-auto"
+    onClick={(e) => e.stopPropagation()} // prevent closing drawer when clicking inside
+  >
+    <h2 className="text-xl font-semibold mb-4">Categories</h2>
+    <nav>
+      {categories.map((cat, index) => (
+        <div key={index} className="mb-4">
+          {cat.path ? (
+            // Direct navigation categories
+            <button
+              onClick={() => {
+                navigate(cat.path);
+                setDrawerOpen(false);
+              }}
+              className="flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-blue-600"
+            >
+              {cat.name}
+            </button>
+          ) : (
+            // Expandable categories
+            <button
+              onClick={() => toggleCategory(index)}
+              className="flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-blue-600"
+            >
+              {cat.name}
+              <svg
+                className={`w-5 h-5 transition-transform ${
+                  openIndex === index ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+          )}
+
+          {/* Subcategory list */}
+          {openIndex === index && !cat.path && (
+            <ul className="mt-2 pl-4 space-y-1 text-gray-700">
+              {/* Cats & Dogs layout */}
+              {["Cats", "Dogs"].includes(cat.name) && (
+                <>
+                  <li className="font-bold mt-2">Shop For:</li>
+                  {cat.subCategories.shopFor.map((item, i) => (
+                    <li
+                      key={`mobile-shop-${i}`}
+                      className="cursor-pointer hover:text-blue-600"
+                      onClick={() => handleSubCategoryClick(item)}
                     >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                )}
+                      {item.name}
+                    </li>
+                  ))}
+                  <li className="font-bold mt-2">Top Brands:</li>
+                  {cat.subCategories.topBrands.map((brand, i) => (
+                    <li
+                      key={`mobile-brand-${i}`}
+                      className="cursor-pointer hover:text-blue-600"
+                      onClick={() => handleSubCategoryClick(brand)}
+                    >
+                      {brand.name} {brand.discount && `(${brand.discount})`}
+                    </li>
+                  ))}
+                </>
+              )}
 
-                {/* Subcategory list for expandable categories (if openIndex matches and no direct path) */}
-                {openIndex === index && !cat.path && (
-                  <ul className="mt-2 pl-4 space-y-1 text-gray-700">
-                    {["Cats", "Dogs"].includes(cat.name) ? (
-                      // Display a simplified list for Cats and Dogs on mobile
-                      <>
-                        <li className="font-bold mt-2">Shop For:</li>
-                        {cat.subCategories.shopFor.map((item, i) => (
-                          <li
-                            key={`mobile-shop-${i}`}
-                            className="cursor-pointer hover:text-blue-600"
-                            onClick={() => handleSubCategoryClick(item)}
-                          >
-                            {item.name}
-                          </li>
-                        ))}
-                        <li className="font-bold mt-2">Top Brands:</li>
-                        {cat.subCategories.topBrands.map((brand, i) => (
-                          <li
-                            key={`mobile-brand-${i}`}
-                            className="cursor-pointer hover:text-blue-600"
-                            onClick={() => handleSubCategoryClick(brand)}
-                          >
-                            {brand.name} {brand.discount && `(${brand.discount})`}
-                          </li>
-                        ))}
-                      </>
-                    ) : (
-                      // Existing rendering for other categories on mobile (Pharmacy, Henlo, Shop By Breed, Summer Sale)
-                      cat.subCategories.map((sub, i) => (
-                        <li
-                          key={i}
-                          className="cursor-pointer hover:text-blue-600"
-                          onClick={() => handleSubCategoryClick(sub)}
-                        >
-                          {typeof sub === "object" ? sub.name : sub}
-                        </li>
-                      ))
-                    )}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </nav>
+              {/* Meet And Breed layout */}
+              {cat.name === "Meet And Breed" && (
+                <>
+                  <li className="font-bold mt-2">Breeds:</li>
+                  {cat.subCategories.shopFor.map((breed, i) => (
+                    <li
+                      key={`mobile-breed-${i}`}
+                      className="cursor-pointer hover:text-blue-600"
+                      onClick={() => handleSubCategoryClick(breed)}
+                    >
+                      {breed.name}
+                    </li>
+                  ))}
+                </>
+              )}
+
+              {/* Default layout */}
+              {!["Cats", "Dogs", "Meet And Breed"].includes(cat.name) &&
+                cat.subCategories.map((sub, i) => (
+                  <li
+                    key={i}
+                    className="cursor-pointer hover:text-blue-600"
+                    onClick={() => handleSubCategoryClick(sub)}
+                  >
+                    {typeof sub === "object" ? sub.name : sub}
+                  </li>
+                ))}
+            </ul>
+          )}
         </div>
-      </div>
-
+      ))}
+    </nav>
+  </div>
+</div>
 
       {/* DELIVERY MODAL (now a separate component) */}
       {showDeliveryModal && (

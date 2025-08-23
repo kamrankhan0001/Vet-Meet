@@ -85,7 +85,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
       <button
         key={idx}
         onClick={() => scrollToSection(item.ref)}
-        className="flex items-center space-x-3 px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
+        className="flex flex-col sm:flex-row items-center sm:space-x-3 px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
       >
         <img
           src={item.img}
@@ -233,7 +233,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
 <div ref={dietRef}>
 <section className="mb-12 bg-gray-100 rounded-lg shadow-lg overflow-hidden">
 
-    <div className="mt-0 p-6 bg-gradient-to-r from-orange-400 to-orange-300 text-white rounded-xl shadow-xl flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div className="p-6 bg-gradient-to-r from-orange-400 to-orange-300 text-white rounded-xl shadow-xl flex flex-col sm:flex-row justify-between items-center gap-4">
     <p className="text-xl font-semibold text-center sm:text-left">
       Good For First-Time Pet Parents
     </p>
@@ -741,7 +741,7 @@ const GermanShepherdPage = ({ onBackClick }) => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-4 min-w-3xl mx-auto">
+          <div className="space-y-4 mx-auto">
             {faqData.map((faq, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                 <button
@@ -768,6 +768,8 @@ const GermanShepherdPage = ({ onBackClick }) => {
             ))}
           </div>
         </section>
+
+
 
         
       </div>

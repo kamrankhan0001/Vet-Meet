@@ -48,6 +48,7 @@ import Beagle from "./pages/meetByBreed/Beagle";
 import Shih from "./pages/meetByBreed/Shih";
 import Boxer from "./pages/meetByBreed/Boxer";
 import GroomingPage from "./Components/GroomingPage";
+import PetEssentials from "./Components/PetEssentials";
 
 
 import './firebase';
@@ -105,6 +106,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/my-orders" element={<MyOrderPage />} />
         <Route path="/grooming" element={<GroomingPage />} />
+        <Route path="/pet-essentials" element={<PetEssentials />} />
         
         <Route
           path="/health-tips/:title"

@@ -37,7 +37,7 @@ const categories = [
   { title: "Accessories", image: food11 },
   { title: "Fashion Corner", image: food12 },
   { title: "Pet Cleaning Wipes", image: food13 },
-  { title: "Grooming Product", image: food14 },
+  { title: "Grooming Product", image: food14},
   { title: "Dog Travel Bag", image: Food15 },
   { title: "Health Care", image: food17 },
   { title: "Walking Essentials", image: food19, link: "/products/pet-pharmacy" },
@@ -45,9 +45,9 @@ const categories = [
 
 const CategoriesGrid = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 bg-gradient-to-b from-yellow-50 to-white rounded-3xl">
+    <div className="max-w-7xl mx-auto px-4 py-10 bg-white rounded-3xl">
       <h2 className="text-4xl font-extrabold mb-8 text-center text-gray-800 font-[Gotham Rounded]">
-        🐾 Popular Categories
+        Everyday essentials
       </h2>
 
       {/* Mobile view: only 9 items */}

@@ -85,19 +85,21 @@ const LabradorPage = ({ onBackClick }) => {
       <button
         key={idx}
         onClick={() => scrollToSection(item.ref)}
-        className="flex items-center space-x-3 px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
+        className="flex flex-col sm:flex-row items-center sm:space-x-3 px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
       >
         <img
           src={item.img}
           alt={item.label}
           className="w-16 h-16 rounded-full object-cover transform hover:scale-105 transition-transform"
-          loading='lazy'
+          loading="lazy"
         />
-        <span className="font-semibold text-lg">{item.label}</span>
+        <span className="font-semibold text-lg mt-2 sm:mt-0">{item.label}</span>
       </button>
     ))}
   </div>
 </nav>
+
+
 
         <div className="mt-12">
         {/* About Section - Combined from initial overview and traits */}
@@ -749,7 +751,7 @@ const LabradorPage = ({ onBackClick }) => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-4 min-w-3xl mx-auto">
+          <div className="space-y-4 mx-auto">
             {faqData.map((faq, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                 <button
@@ -776,6 +778,7 @@ const LabradorPage = ({ onBackClick }) => {
             ))}
           </div>
         </section>
+
 
         
       </div>

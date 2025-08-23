@@ -109,7 +109,7 @@ const GroomingPage = () => {
         {/* Left Text */}
         <div className="text-center md:text-left max-w-xl">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
-            The <span className="text-lime-300">Glow-up</span> Zone
+            The <span className="text-black">Glow-up</span> Zone
           </h1>
           <p className="mt-4 text-lg md:text-xl text-white opacity-90">
             Pamper your pets with the best grooming essentials and keep them looking fabulous every day!

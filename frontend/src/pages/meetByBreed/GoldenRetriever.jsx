@@ -92,7 +92,7 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
       <button
         key={idx}
         onClick={() => scrollToSection(item.ref)}
-        className="flex items-center space-x-3 px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
+        className="flex flex-col sm:flex-row items-center sm:space-x-3 px-4 py-2 rounded-full text-gray-700 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
       >
         <img
           src={item.img}
@@ -238,179 +238,145 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 </section>
 
 <div ref={dietRef}>
-<section className="mb-12 bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+  <section className="mb-12 bg-gray-100 rounded-lg shadow-lg overflow-hidden">
 
-    <div className="mt-0 p-6 bg-gradient-to-r from-orange-400 to-orange-300 text-white rounded-xl shadow-xl flex flex-col sm:flex-row justify-between items-center gap-4">
-    <p className="text-xl font-semibold text-center sm:text-left">
-      Good For First-Time Pet Parents
-    </p>
-    <div className="text-4xl font-extrabold">9/10</div>
-  </div>
-  
-
-  {/* Content */}
-  <div className="bg-gray-200 p-6">
-    {/* Title */}
-    <div className="flex flex-col md:flex-row items-center md:items-start gap-6 rounded-lg p-4">
-  {/* Text Section */}
-  <div className="flex-1 text-left">
-    <h2 className="text-xl font-bold text-gray-900 mb-1 underline decoration-red-500 decoration-2">
-      Golden Retriever Diet
-    </h2>
-    <p className="text-gray-700 text-lg">
-      Consider following tips when choosing food for your golden retriever.
-    </p>
-  </div>
-
-  {/* Image Section */}
-  <div className="flex-shrink-0">
-    <img src={diet2} 
-    alt="Chicken based food" 
-    className="rounded-md w-40 h-auto object-cover" 
-    loading='lazy'
-    
-    />
-    
-  </div>
-</div>
-
-
-    {/* Tip 1 */}
-    <div className="mb-8 flex flex-col md:flex-row items-center md:items-start gap-6 rounded-lg p-4">
-  
-  {/* Text Section */}
-  <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2 text-lg">
-      1. Choose a protein-rich diet
-    </h3>
-    <p className="text-gray-700 mb-4 text-lg">
-      Since Golden Retrievers are medium to large in size, they require a diet that is 
-      <span className="italic"> high in protein </span>
-      to support their muscle mass and energy needs. Look for 
-      <span className="italic"> dry food </span>
-      that is made with high-quality, easily digestible protein sources like real meat or fish.
-    </p>
-  </div>
-
-  {/* Image Section */}
-  <div className="flex-shrink-0 flex gap-4 flex-wrap justify-center">
-  {[
-    { img: chickenfood, label: "Chicken based food", link: "#" },
-    { img: fishfood, label: "Fish based food", link: "#" },
-  ].map((item, idx) => (
-    <a
-      key={idx}
-      href={item.link}
-      className="relative bg-white rounded-lg shadow-md p-2 w-32 text-center flex flex-col items-center group hover:shadow-lg transition overflow-hidden"
-    >
-      <img src={item.img} 
-      alt={item.label} 
-      className="rounded-md mb-2" 
-      loading='lazy'
-      
-      />
-      <p className="text-sm font-medium">{item.label}</p>
-
-      {/* Arrow button fixed at bottom-right */}
-      <span className="absolute bottom-2 right-2 inline-flex items-center justify-center w-7 h-7 bg-orange-500 text-white text-lg font-bold rounded-full shadow-md transform transition-all duration-300 group-hover:translate-x-1 group-hover:bg-orange-600">
-        →
-      </span>
-    </a>
-  ))}
-</div>
-
-  
-</div>
-
-
-    {/* Tip 2 */}
-    <div className="mb-8">
-      <h3 className="font-bold text-gray-900 mb-2 text-lg">2. Avoid fillers & additives</h3>
-      <p className="text-gray-700 mb-4 text-lg">
-        Most commercial dog food contains fillers like corn, wheat, and soy which can be difficult
-        for them to digest and may cause allergies. Choose dog food that is made with whole, natural
-        ingredients and free from unnecessary additives.
+    {/* Header Section */}
+    <div className="p-6 bg-gradient-to-r from-orange-400 to-orange-300 text-white rounded-xl shadow-xl flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p className="text-xl font-semibold text-center sm:text-left">
+        Good For First-Time Pet Parents
       </p>
-      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-  {[
-    { img: baked, label: "Baked dry food", link: "#" },
-    { img: soy, label: "Soy-free food", link: "#" },
-  ].map((item, idx) => (
-    <a
-      key={idx}
-      href={item.link}
-      className="relative bg-white rounded-lg shadow-md p-2 w-32 text-center flex flex-col items-center group hover:shadow-lg transition overflow-hidden"
-    >
-      <img src={item.img} 
-      alt={item.label} 
-      className="rounded-md mb-2" 
-      loading='lazy'
-      
-      />
-      <p className="text-sm font-medium">{item.label}</p>
-
-      {/* Arrow button fixed at bottom-right */}
-      <span className="absolute bottom-2 right-2 inline-flex items-center justify-center w-7 h-7 bg-orange-500 text-white text-lg font-bold rounded-full shadow-md transform transition-all duration-300 group-hover:translate-x-1 group-hover:bg-orange-600">
-        →
-      </span>
-    </a>
-  ))}
-</div>
-
+      <div className="text-4xl font-extrabold">9/10</div>
     </div>
 
-    {/* Tip 3 */}
-    <div className="mb-8 flex flex-col md:flex-row items-center md:items-start gap-6 rounded-lg p-4">
-  
-  {/* Text Section */}
-  <div className="flex-1 text-left">
-    <h3 className="font-bold text-gray-900 mb-2 text-lg">3. Consider their age</h3>
-    <p className="text-gray-700 mb-4 text-lg">
-      The nutritional needs of puppies are different from those of adult dogs. 
-      A puppy’s diet should be higher in protein and calories to support their rapid 
-      growth and development. Diet for an adult dog should be formulated to meet 
-      their maintenance needs.
-    </p>
-  </div>
+    {/* Content */}
+    <div className="bg-gray-200 p-6">
 
-  {/* Image Section */}
-  <div className="flex-shrink-0 flex gap-4 flex-wrap justify-center">
-  {[
-    { img: puppy, label: "Puppy food", link: "#" },
-    { img: adult, label: "Adult dog food", link: "#" },
-    { img: senior, label: "Senior dog food", link: "#" },
-  ].map((item, idx) => (
-    <a
-      key={idx}
-      href={item.link}
-      className="relative bg-white rounded-lg shadow-md p-2 w-32 text-center flex flex-col items-center group hover:shadow-lg transition overflow-hidden"
-    >
-      <img src={item.img} 
-      alt={item.label} 
-      className="rounded-md mb-2" 
-      loading='lazy'
-      
-      />
-      <p className="text-sm font-medium">{item.label}</p>
-
-      {/* Arrow button fixed at bottom-right */}
-      <span className="absolute bottom-2 right-2 inline-flex items-center justify-center w-7 h-7 bg-orange-500 text-white text-lg font-bold rounded-full shadow-md transform transition-all duration-300 group-hover:translate-x-1 group-hover:bg-orange-600">
-        →
-      </span>
-    </a>
-  ))}
-</div>
-
-  
-</div>
-
-  </div>
-</section>
-
-
-        </div>
+      {/* Title Row */}
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 rounded-lg p-4">
+        {/* Text Section */}
+        <div className="flex-1 text-center md:text-left">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 underline decoration-red-500 decoration-2">
+            Golden Retriever Diet
+          </h2>
+          <p className="text-gray-700 text-lg">
+            Consider following tips when choosing food for your golden retriever.
+          </p>
         </div>
 
+        {/* Image Section */}
+        <div className="flex-shrink-0">
+          <img 
+            src={diet2} 
+            alt="Chicken based food" 
+            className="rounded-md w-full max-w-[180px] h-auto object-cover" 
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* Tip 1 */}
+      <div className="mb-8 flex flex-col md:flex-row items-center md:items-start gap-6 rounded-lg p-4">
+        <div className="flex-1 text-center md:text-left">
+          <h3 className="font-bold text-gray-900 mb-2 text-lg">
+            1. Choose a protein-rich diet
+          </h3>
+          <p className="text-gray-700 mb-4 text-lg">
+            Since Golden Retrievers are medium to large in size, they require a diet that is 
+            <span className="italic"> high in protein </span>
+            to support their muscle mass and energy needs. Look for 
+            <span className="italic"> dry food </span>
+            that is made with high-quality, easily digestible protein sources like real meat or fish.
+          </p>
+        </div>
+
+        {/* Food Options */}
+        <div className="grid grid-cols-2 sm:flex gap-4 justify-center">
+          {[
+            { img: chickenfood, label: "Chicken based food", link: "#" },
+            { img: fishfood, label: "Fish based food", link: "#" },
+          ].map((item, idx) => (
+            <a
+              key={idx}
+              href={item.link}
+              className="relative bg-white rounded-lg shadow-md p-3 w-32 text-center flex flex-col items-center group hover:shadow-lg transition overflow-hidden"
+            >
+              <img src={item.img} alt={item.label} className="rounded-md mb-2 w-full h-auto" loading="lazy" />
+              <p className="text-sm font-medium">{item.label}</p>
+              <span className="absolute bottom-2 right-2 inline-flex items-center justify-center w-7 h-7 bg-orange-500 text-white text-lg font-bold rounded-full shadow-md transform transition-all duration-300 group-hover:translate-x-1 group-hover:bg-orange-600">
+                →
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Tip 2 */}
+      <div className="mb-8">
+        <h3 className="font-bold text-gray-900 mb-2 text-lg text-center md:text-left">2. Avoid fillers & additives</h3>
+        <p className="text-gray-700 mb-4 text-lg text-center md:text-left">
+          Most commercial dog food contains fillers like corn, wheat, and soy which can be difficult
+          for them to digest and may cause allergies. Choose dog food that is made with whole, natural
+          ingredients and free from unnecessary additives.
+        </p>
+
+        <div className="grid grid-cols-2 sm:flex gap-4 justify-center md:justify-start">
+          {[
+            { img: baked, label: "Baked dry food", link: "#" },
+            { img: soy, label: "Soy-free food", link: "#" },
+          ].map((item, idx) => (
+            <a
+              key={idx}
+              href={item.link}
+              className="relative bg-white rounded-lg shadow-md p-3 w-32 text-center flex flex-col items-center group hover:shadow-lg transition overflow-hidden"
+            >
+              <img src={item.img} alt={item.label} className="rounded-md mb-2 w-full h-auto" loading="lazy" />
+              <p className="text-sm font-medium">{item.label}</p>
+              <span className="absolute bottom-2 right-2 inline-flex items-center justify-center w-7 h-7 bg-orange-500 text-white text-lg font-bold rounded-full shadow-md transform transition-all duration-300 group-hover:translate-x-1 group-hover:bg-orange-600">
+                →
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Tip 3 */}
+      <div className="mb-8 flex flex-col md:flex-row items-center md:items-start gap-6 rounded-lg p-4">
+        <div className="flex-1 text-center md:text-left">
+          <h3 className="font-bold text-gray-900 mb-2 text-lg">3. Consider their age</h3>
+          <p className="text-gray-700 mb-4 text-lg">
+            The nutritional needs of puppies are different from those of adult dogs. 
+            A puppy’s diet should be higher in protein and calories to support their rapid 
+            growth and development. Diet for an adult dog should be formulated to meet 
+            their maintenance needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-center">
+          {[
+            { img: puppy, label: "Puppy food", link: "#" },
+            { img: adult, label: "Adult dog food", link: "#" },
+            { img: senior, label: "Senior dog food", link: "#" },
+          ].map((item, idx) => (
+            <a
+              key={idx}
+              href={item.link}
+              className="relative bg-white rounded-lg shadow-md p-3 w-32 text-center flex flex-col items-center group hover:shadow-lg transition overflow-hidden"
+            >
+              <img src={item.img} alt={item.label} className="rounded-md mb-2 w-full h-auto" loading="lazy" />
+              <p className="text-sm font-medium">{item.label}</p>
+              <span className="absolute bottom-2 right-2 inline-flex items-center justify-center w-7 h-7 bg-orange-500 text-white text-lg font-bold rounded-full shadow-md transform transition-all duration-300 group-hover:translate-x-1 group-hover:bg-orange-600">
+                →
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+</div>
         {/* Diet/Health Section */}
         
           <section className="mb-12 bg-lime-100 p-8 rounded-lg shadow-md">
@@ -782,10 +748,10 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
 
         {/* FAQ Section */}
         <section className="py-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-4 min-w-3xl mx-auto">
+          <div className="space-y-4 mx-auto">
             {faqData.map((faq, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                 <button
@@ -812,6 +778,8 @@ const GoldenRetrieverPage = ({ onBackClick }) => {
             ))}
           </div>
         </section>
+
+
 
       </div>
     </div>
