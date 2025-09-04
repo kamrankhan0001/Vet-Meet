@@ -372,23 +372,23 @@ const ClinicPage = ({ toggleAppointmentModal }) => {
           className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-all flex flex-col"
         >
           {/* Image - Top */}
-          <div className="relative h-full">
+          <div className="relative h-auto w-full max-h-84 overflow-hidden">
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover"
               loading="lazy"
             />
             <img
               src="https://placehold.co/60x20/FFFFFF/000000?text=FearFree"
               alt="FearFree Certified"
-              className="absolute top-3 left-3 h-5"
+              className="absolute top-3 left-3 h-7 w-auto rounded-full shadow-md"
               loading="lazy"
             />
           </div>
 
           {/* Text & Button - Bottom */}
-          <div className="flex flex-col justify-between p-4 h-48">
+          <div className="flex flex-col justify-between p-2 flex-grow">
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
               {service.points?.length > 0 ? (
@@ -403,7 +403,7 @@ const ClinicPage = ({ toggleAppointmentModal }) => {
             </div>
 
             {/* Button - Right aligned */}
-            <div className="flex justify-end mt-4">
+            <div className="flex justify-end mt-2">
               <button
                 onClick={toggleAppointmentModal}
                 className="bg-orange-500 text-white font-semibold text-sm py-2 px-4 rounded hover:bg-orange-600 transition-transform transform hover:scale-105"

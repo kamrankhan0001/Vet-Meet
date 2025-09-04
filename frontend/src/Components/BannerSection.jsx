@@ -8,6 +8,7 @@ import image4 from "../assets/banner/image4.png";
 import image5 from "../assets/banner/image5.png";
 import image6 from "../assets/banner/image6.png";
 import image7 from "../assets/banner/image7.png";
+
 //import a1 from "../assets/banner/a1.jpeg";
 
 function BannerSection() {
@@ -48,7 +49,7 @@ function BannerSection() {
    <div className="relative" {...handlers}>
       {/* Banner image */}
       <div
-        className="w-full h-48 sm:h-72 md:h-96 bg-contain bg-center mt-5 bg-no-repeat"
+        className="w-full h-28 sm:h-72 md:h-96 mt-3 bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${banners[currentIndex]})` }}
       >
     

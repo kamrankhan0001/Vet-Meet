@@ -1,5 +1,5 @@
 import React from "react";
-import b1 from "../assets/banner/b1.jpeg";
+import b2 from "../assets/banner/b2.jpeg";
 
 const SecondBanner = () => {
   return (
@@ -10,7 +10,7 @@ const SecondBanner = () => {
 
       {/* Responsive Image */}
       <img
-        src={b1}
+        src={b2}
         alt="Responsive Banner"
         className="w-full h-full object-cover"
         loading="lazy"

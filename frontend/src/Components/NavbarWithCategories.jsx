@@ -70,7 +70,7 @@ const categories = [
         { name: "Crates & Carriers", img: cat4 },
         { name: "Trees, Beds & Scratchers", img: cat6 },
         { name: "Toys", img: cat5 },
-        { name: "Grooming", img: cat7 },
+        { name: "Grooming", img: cat7, path: "/grooming" },
         { name: "Collars & Accessories", img: cat8 },
         { name: "Bowls & Diners", img: cat10 },
         { name: "Personalised Products", img: cat11 },
