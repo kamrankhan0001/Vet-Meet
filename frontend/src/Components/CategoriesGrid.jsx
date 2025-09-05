@@ -62,6 +62,7 @@ const CategoriesGrid = () => {
               src={category.image}
               alt={category.title}
               className="w-full h-36 object-cover rounded-t-2xl"
+              loading="lazy"
             />
             <div className="p-2 text-center">
               <p className="text-xs font-bold font-serif text-gray-700">
